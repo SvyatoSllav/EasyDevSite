@@ -1,0 +1,274 @@
+.header {
+    margin: 43px auto 0;
+    max-width: 1372px;
+    padding-top: 11px;
+    background-color: #fff;
+    border-radius: 68px;
+}
+
+.header__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 104px;
+    height: 104px;
+}
+
+.header__nav-items {
+    display: flex;
+}
+
+
+.header__nav-link {
+    margin-right: 40px;
+}
+
+.header__nav-item {
+    font-family: "Unbounded";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #161C2D;
+}
+
+.header__nav_item:last-child {
+    margin-right: 0;
+}
+
+.header__nav_contact-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__nav_contact-text {
+    color: #fff;
+    background-color: #DE6DF1;
+    padding: 16px 26px;
+    font-family: 'Unbounded';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 12px;
+}
+
+.header__text-animation {
+    position: absolute;
+    right: 370px;
+    top: 221px;
+    width: 192px;
+}
+
+.header__border-square {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+}
+
+.header__border-square_top-left {
+    top: 28px;
+    right: 2px;
+}
+
+.header__border-square_top-right {
+    top: 20px;
+    left: 285px;
+    animation: followBorder 5s ease infinite;
+}
+
+.header__border-square_bottom-right {
+    top: 92px;
+    left: 285px;
+    animation: followBorder 5s ease infinite;
+}
+@keyframes followBorder {
+    0% {
+        left: 425px;
+    }
+    20%{
+        left: 285px;
+    }
+    40% {
+        left: 195px;
+    }
+    60% {
+        left: 195px;
+    }
+    80% {
+        left: 195px;
+    }
+    100% {
+        left: 425px;
+    }
+}
+
+.header__border-square_bottom-left {
+    top: 84px;
+    right: 2px;
+}
+
+.header__animated-texts {
+    border: 2px solid black;
+    list-style: none;
+    width: 290px;
+    height: 82px;
+    overflow: hidden;
+    animation: scaleWidth 5s ease infinite;
+}
+
+@keyframes scaleWidth {
+    0% {
+        width: 430px;
+    }
+    20% {
+        width: 290px;
+    }
+
+    40% {
+        width: 200px;
+    }
+
+    60% {
+        width: 200px;
+    }
+
+    80% {
+        width: 200px;
+    }
+
+    100% {
+        width: 430px;
+    }
+}
+
+.header__animated-texts li {
+    position: relative;
+    top: 0;
+    left: 45px;
+}
+
+.header__animated-texts li:first-child {
+    top: 11px;
+    animation: FirstSlide 5s steps(5) infinite;
+}
+
+.header__animated-texts li:nth-child(2) {
+    top: 40px;
+    animation: SecondSlide 5s steps(5) infinite;
+}
+
+.header__animated-texts li:nth-child(3) {
+    top: 119px;
+    animation: ThidSlide 5s steps(5) infinite;
+}
+
+.header__animated-texts li:nth-child(4) {
+    top: 180px;
+    animation: FourthSlide 5s steps(5) infinite;
+}
+
+.header__animated-texts li:nth-child(5) {
+    top: 300px;
+    animation: FifthSlide 5s steps(5) infinite;
+}
+
+@keyframes FirstSlide {
+    100% {
+        top: -330px;
+    }
+}
+
+@keyframes SecondSlide {
+    100% {
+        top: -350px;
+    }
+}
+
+@keyframes ThidSlide {
+    100% {
+        top: -400px;
+    }
+}
+
+@keyframes FourthSlide {
+    100% {
+        top: -350px;
+    }
+}
+
+@keyframes FifthSlide {
+    100% {
+        top: -310px;
+    }
+}
+
+.header__animation-text {
+    font-family: 'Golos-Text-Regular';
+    font-weight: 400;
+    font-size: 44px;
+    color: #DE6DF1;
+    position: relative;
+    white-space: nowrap;
+}
+
+.header__animation-text::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #DE6DF1;
+    background-color: #fff;
+}
+
+.parser-animation::after {
+    animation: typing 1s steps(10) infinite;
+}
+
+.bots-animation::after {
+    animation: typing 1s steps(7) infinite;
+}
+
+.sites-animation::after {
+    animation: typing 1s steps(8) infinite;
+}
+
+.soft-animation::after {
+    animation: typing 1s steps(6) infinite;
+}
+
+.webapp-animation::after {
+    animation: typing 1s steps(19) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+    }
+}
+
+.header__content {
+    margin-top: 153px;
+    display: flex;
+}
+
+.header__title {
+    font-family: 'Unbounded';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 70px;
+    color: #161C2D;
+}
+
+.header__img {
+    padding-top: 60px;
+    padding-bottom: 71px;
+}

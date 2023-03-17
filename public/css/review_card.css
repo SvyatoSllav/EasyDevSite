@@ -1,0 +1,53 @@
+.review__card {
+    border: 3px solid #A8DCFF;
+    border-radius: 45px;
+    padding: 56px 42px;
+    max-width: 440px;
+    height: 422px;
+}
+
+.review__card-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review__text {
+    font-family: 'Golos-Text-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 49px;
+}
+
+.review__author {
+    display: flex;
+}
+
+.review__author-profile {
+    margin-right: 10px;
+
+}
+
+.review__author-info {
+    padding-top: 18px;
+}
+
+.review__author-name {
+    font-family: 'Golos-Text-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.review__author-company {
+    font-family: 'Golos-Text-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #555555;
+}

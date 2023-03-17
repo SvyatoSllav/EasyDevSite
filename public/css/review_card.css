@@ -28,6 +28,8 @@
 
 .review__author-profile {
     margin-right: 10px;
+    max-width: 64px;
+    max-height: 64px;
 
 }
 

@@ -16,71 +16,16 @@
           :slides-per-view="3"
           :space-between="50"
         >
-          <swiperSlide>
+          <swiperSlide :key="post.id" v-for="post in posts">
             <review-card>
-              <template v-slot:review-text
-                >“Скоро год, как сотрудничаем с компанией. Начали работать с
-                самого начала нашего бизнеса. Ребята достаточно быстро и
-                качественно создали группу, разработав для нее логотип,
-                аватарку, определенный фирменный стиль магазина. Заполнили
-                необходимой информацией и контентом всю группу, предварительно
-                обсудив с нами все детали.”</template
-              >
+              <template v-slot:review-text>{{ post.reviewText }}</template>
               <template v-slot:author-img
-                ><img src="../../public/img/review_author1.png" alt=""
+                ><img :src="post.authorImg" alt=""
               /></template>
-              <template v-slot:author-name>Анастасия Иванова</template>
-              <template v-slot:author-company>CLG Globus</template>
-            </review-card>
-          </swiperSlide>
-
-          <swiperSlide>
-            <review-card>
-              <template v-slot:review-text
-                >“С компанией сотрудничаем около полугода. Помогли с раскруткой
-                и администрированием. Доволен ценой и грамотной консультацией по
-                любому вопросу. Спасибо!”</template
-              >
-              <template v-slot:author-img
-                ><img src="../../public/img/review_author1.png" alt=""
-              /></template>
-              <template v-slot:author-name>Анастасия Иванова</template>
-              <template v-slot:author-company>CLG Globus</template>
-            </review-card>
-          </swiperSlide>
-
-          <swiperSlide>
-            <review-card>
-              <template v-slot:review-text
-                >“Скоро год, как сотрудничаем с компанией. Начали работать с
-                самого начала нашего бизнеса. Ребята достаточно быстро и
-                качественно создали группу, разработав для нее логотип,
-                аватарку, определенный фирменный стиль магазина. Заполнили
-                необходимой информацией и контентом всю группу, предварительно
-                обсудив с нами все детали.”</template
-              >
-              <template v-slot:author-img
-                ><img src="../../public/img/review_author1.png" alt=""
-              /></template>
-              <template v-slot:author-name>Анастасия Иванова</template>
-              <template v-slot:author-company>CLG Globus</template>
-            </review-card>
-          </swiperSlide>
-          <swiperSlide>
-            <review-card>
-              <template v-slot:review-text
-                >“Хочу поделиться радостью и выразить свою благодарность
-                компании! Благодаря ее трудам, мы не стоим на месте, а растем и
-                развиваемся. Ребята - молодцы! Усовершенствовали нашу группу
-                вконтакте: появилась навигация, теперь всю необходимую
-                информацию можно найти, кликнув на банер. Также у нас появился
-                замечательный сайт!”</template
-              >
-              <template v-slot:author-img
-                ><img src="../../public/img/review_author1.png" alt=""
-              /></template>
-              <template v-slot:author-name>Анастасия Иванова</template>
-              <template v-slot:author-company>CLG Globus</template>
+              <template v-slot:author-name>{{ post.authorName }}</template>
+              <template v-slot:author-company>{{
+                post.authorCompany
+              }}</template>
             </review-card>
           </swiperSlide>
         </swiper>
@@ -116,6 +61,40 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  data() {
+    return {
+      posts: [
+        {
+          id: 1,
+          reviewText: "somte-text",
+          authorImg: require("../assets/review_author1.png"),
+          authorName: "author__name",
+          authorCompany: "asmamda",
+        },
+        {
+          id: 2,
+          reviewText: "somte-text",
+          authorImg: require("../assets/review_author1.png"),
+          authorName: "author__name",
+          authorCompany: "asmamda",
+        },
+        {
+          id: 3,
+          reviewText: "somte-text",
+          authorImg: require("../assets/review_author1.png"),
+          authorName: "author__name",
+          authorCompany: "asmamda",
+        },
+        {
+          id: 4,
+          reviewText: "somte-text",
+          authorImg: require("../assets/review_author1.png"),
+          authorName: "author__name",
+          authorCompany: "asmamda",
+        },
+      ],
+    };
   },
   setup() {
     const prev = ref(null);

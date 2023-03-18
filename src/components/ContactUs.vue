@@ -14,7 +14,7 @@
           Успех вашего будущего проекта начинается здесь!Найдем решение для
           любой вашей задачи.
         </h3>
-        <form action="" @submit.prevent>
+        <form @submit.prevent>
           <input
             v-model="name"
             type="text"
@@ -37,7 +37,6 @@
             required
           /><br />
           <contact-button
-            type="submit"
             class="contact__submit-btn"
             @click="sendFormData"
           ></contact-button>
@@ -55,6 +54,14 @@ export default {
       email: "",
       phone: "",
     };
+  },
+  methods: {
+    sendFormData() {
+      console.log(this.name);
+      console.log(this.email);
+      console.log(this.phone);
+      this.name = this.email = this.phone = "";
+    },
   },
 };
 </script>

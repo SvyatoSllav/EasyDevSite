@@ -1,6 +1,6 @@
 .contact {
     background-color: #fff;
-    padding: 245px 31px 0;
+    padding: 245px 31px 105px;
 }
 
 .contact__wrapper {
@@ -8,7 +8,6 @@
     justify-content: center;
     background: linear-gradient(292.4deg, #3587BF -63.31%, rgba(222, 109, 241, 0.99) 130.37%);
     border-radius: 68px;
-    margin-bottom: -500px;
 }
 
 .contact__phone {
@@ -75,6 +74,3 @@
 .contact__phone-field {
     margin-bottom: 50px;
 }
-
-
-.contact__submit-btn {}

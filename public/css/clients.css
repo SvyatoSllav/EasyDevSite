@@ -21,8 +21,7 @@
     animation: slide 5s linear infinite;
     margin-left: 165px;
 }
-.clients__banner:first-child {
-}
+
 
 @keyframes slide {
     0% {

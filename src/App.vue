@@ -6,18 +6,21 @@
   <the-header></the-header>
   <the-about></the-about>
   <the-reviews></the-reviews>
+  <the-clients></the-clients>
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader";
 import TheAbout from "@/components/TheAbout";
 import TheReviews from "@/components/TheReviews";
+import TheClients from "@/components/TheClients";
 export default {
   data() {},
   components: {
     TheHeader,
     TheAbout,
     TheReviews,
+    TheClients,
   },
 };
 </script>

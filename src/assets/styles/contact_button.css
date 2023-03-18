@@ -1,0 +1,13 @@
+.contact-btn {
+    cursor: pointer;
+    background-color: #DE6DF1;
+    padding: 25px 135px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+}

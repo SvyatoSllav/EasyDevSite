@@ -7,6 +7,7 @@
   <the-about></the-about>
   <the-reviews></the-reviews>
   <the-clients></the-clients>
+  <contact-us></contact-us>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import TheHeader from "@/components/TheHeader";
 import TheAbout from "@/components/TheAbout";
 import TheReviews from "@/components/TheReviews";
 import TheClients from "@/components/TheClients";
+import ContactUs from "@/components/ContactUs";
 export default {
   data() {},
   components: {
@@ -21,6 +23,7 @@ export default {
     TheAbout,
     TheReviews,
     TheClients,
+    ContactUs,
   },
 };
 </script>

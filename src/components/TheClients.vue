@@ -5,8 +5,8 @@
       ><template v-slot:second_tag>/клиенты</template>
     </gradient-tags>
     <div class="clients-banner-wrapper">
-      <img class="clients__banner" src="../assets/banner.png" alt="" />
-      <img class="clients__banner" src="../assets/banner.png" alt="" />
+      <img class="clients__banner" src="../assets/img/banner.png" alt="" />
+      <img class="clients__banner" src="../assets/img/banner.png" alt="" />
     </div>
   </section>
 </template>

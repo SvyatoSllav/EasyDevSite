@@ -7,6 +7,7 @@
     <div class="clients-banner-wrapper">
       <img class="clients__banner" src="../assets/img/banner.png" alt="" />
       <img class="clients__banner" src="../assets/img/banner.png" alt="" />
+      <img class="clients__banner" src="../assets/img/banner.png" alt="" />
     </div>
   </section>
 </template>

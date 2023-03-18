@@ -19,9 +19,9 @@
 
 .clients__banner {
     animation: slide 5s linear infinite;
+    margin-left: 165px;
 }
 .clients__banner:first-child {
-    margin-right: 165px;
 }
 
 @keyframes slide {

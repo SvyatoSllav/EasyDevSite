@@ -14,21 +14,24 @@
           Успех вашего будущего проекта начинается здесь!Найдем решение для
           любой вашей задачи.
         </h3>
-        <form action="" @submit.prevent="onSubmit">
+        <form action="" @submit.prevent>
           <input
+            v-model="name"
             type="text"
             class="contact__name-field contact__form-field"
             placeholder="Имя"
             required
           /><br />
           <input
-            type="text"
+            v-model="email"
+            type="email"
             class="contact__email-field contact__form-field"
             placeholder="Email"
             required
           /><br />
           <input
-            type="phone"
+            v-model="phone"
+            type="tel"
             class="contact__phone-field contact__form-field"
             placeholder="Телефон"
             required
@@ -36,6 +39,7 @@
           <contact-button
             type="submit"
             class="contact__submit-btn"
+            @click="sendFormData"
           ></contact-button>
         </form>
       </div>
@@ -44,7 +48,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      phone: "",
+    };
+  },
+};
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
     cursor: pointer;
     background-color: #DE6DF1;
     padding: 25px 135px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 15px;
     font-family: 'Unbounded';
     font-style: normal;
@@ -10,4 +10,11 @@
     font-size: 28px;
     line-height: 33px;
     color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    color: #DE6DF1;
+    border: 2px solid black;
+    background-color: #fff;
 }

@@ -22,3 +22,8 @@
     column-gap: 40px;
     row-gap: 50px;
 }
+.services__contact-link{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 78px;
+}

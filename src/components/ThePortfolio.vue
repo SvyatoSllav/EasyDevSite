@@ -14,9 +14,7 @@
         </portfolio-item>
       </div>
       <div class="portfolio__contact-link">
-        <a href="#contact" class="contact__link">
-          <contact-button></contact-button>
-        </a>
+        <contact-button class="contact__link">Смотреть ещё</contact-button>
       </div>
     </div>
   </section>

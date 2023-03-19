@@ -22,6 +22,7 @@
 }
 
 .reviews__slider {
+    cursor: pointer;
     padding: 0 10px;
     width: 100%;
     display: flex;
@@ -43,6 +44,7 @@
 }
 
 .swiper-btn {
+    cursor: pointer;
     width: 64px;
     height: 64px;
     background-color: #A8DCFF;

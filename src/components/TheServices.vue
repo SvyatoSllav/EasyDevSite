@@ -11,6 +11,9 @@
           <template v-slot:item-text>{{ item.text }}</template>
         </service-item>
       </div>
+      <div class="services__contact-link">
+        <contact-button class="contact__link">Смотреть ещё</contact-button>
+      </div>
     </div>
   </section>
 </template>

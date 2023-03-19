@@ -11,7 +11,6 @@
     padding-top: 165px;
     margin-left: auto;
     margin-bottom: 70px;
-    /* margin: 0 0px 70px auto; */
     width: 252px;
 }
 
@@ -36,6 +35,6 @@
     }
 
     100% {
-        transform: translate(-1582px);
+        transform: translate(-1570px);
     }
 }

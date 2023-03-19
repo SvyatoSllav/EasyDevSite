@@ -57,10 +57,10 @@
 }
 
 .header__text-animation {
-    position: absolute;
-    right: 370px;
-    top: 221px;
     width: 192px;
+    margin-top: 31px;
+    margin-left: auto;
+    margin-right: 309px;
 }
 
 .header__border-square {
@@ -256,7 +256,7 @@
 }
 
 .header__content {
-    margin-top: 153px;
+    margin-top: 8px;
     display: flex;
 }
 

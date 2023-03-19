@@ -82,5 +82,5 @@ export default {
 };
 </script>
 <style>
-@import "../../public/css/header.css";
+@import "@/assets/styles/header.css";
 </style>

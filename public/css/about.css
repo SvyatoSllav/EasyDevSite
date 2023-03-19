@@ -57,3 +57,14 @@
     left: 619px;
     top: 104px;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}

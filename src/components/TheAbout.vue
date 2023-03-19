@@ -41,7 +41,11 @@
             Быстрый запуск
           </button>
         </div>
-        <about-text>{{ this.text }}</about-text>
+        <transition name="fade" mode="out-in">
+          <about-text :key="this.text">
+            {{ this.text }}
+          </about-text>
+        </transition>
       </div>
     </div>
   </section>

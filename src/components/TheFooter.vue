@@ -11,16 +11,26 @@
       <contact-button></contact-button>
       <div class="footer__contacts">
         <h3 class="footer__phone-contact">
-          Телефон: <a href="tel:+79172300481">7(917)230-04-81</a>
+          <a href="tel:+79172300481">+79172300481</a>
         </h3>
         <h3 class="footer__mail-contact">
-          Email:
           <a href="mailto:info@easydev-program.com">info@easydev-program.com</a>
         </h3>
         <h3 class="footer__telegram-contact">
-          Telegram:
-          <a href="https://t.me/EasyDevVi">Виталий</a>
+          <a href="https://t.me/EasyDevVi">TG Виталий</a>
         </h3>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer-copyright-text">
+          © monday4me 2022, ООО «Понедельник для меня» ОГРН 1227700006930, ИНН
+          9729318077
+        </div>
+        <div class="footer-copyright-links">
+          <a href="#" class="copyright-agreement">
+            Пользовательское соглашение
+          </a>
+          <a href="#" class="copyright-rules">Политика конфиденциальности</a>
+        </div>
       </div>
     </div>
   </footer>

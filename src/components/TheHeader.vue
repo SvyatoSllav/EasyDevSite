@@ -7,7 +7,7 @@
           <a href="#about" class="header__nav-link">
             <h2 class="header__nav-item">О нас</h2>
           </a>
-          <a href="#" class="header__nav-link">
+          <a href="#portfolio" class="header__nav-link">
             <h2 class="header__nav-item">Наши работы</h2>
           </a>
           <a href="#" class="header__nav-link">
@@ -18,7 +18,9 @@
           </a>
         </div>
         <button class="header__nav_contact-button">
-          <h2 class="header__nav_contact-text">Оставить заявку</h2>
+          <a href="#contact" class="header__nav_contact-text">
+            Оставить заявку
+          </a>
         </button>
       </div>
       <div class="header__text-animation">

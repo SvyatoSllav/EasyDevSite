@@ -2,8 +2,8 @@
   <section class="portfolio" id="portfolio">
     <div class="porfolio__wrapper">
       <gradient-tags class="portfolio__tags">
-        <template v-slot:first_tag>наши работы</template
-        ><template v-slot:second_tag>/наши работы</template>
+        <template v-slot:first_tag>наши работы</template>
+        <template v-slot:second_tag>/наши работы</template>
       </gradient-tags>
       <div class="porftolio__items">
         <portfolio-item

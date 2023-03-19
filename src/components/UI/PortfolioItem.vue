@@ -4,7 +4,11 @@
       <a :href="item.link">
         <div class="porftolio__item-name">{{ item.name }}</div>
         <span class="portfolio__item-link">Полный текст</span>
-        <img src="../../assets/img/portfolio_arrow_link.svg" alt="" />
+        <img
+          class="portfolio__item-arrow"
+          src="../../assets/img/portfolio_arrow_link.svg"
+          alt=""
+        />
       </a>
     </div>
     <a :href="item.link">

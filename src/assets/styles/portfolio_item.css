@@ -31,3 +31,8 @@
     color: rgba(222, 109, 241, 0.4);
     margin-right: 8px;
 }
+
+.portfolio__item-arrow {
+    position: relative;
+    top: 3px;
+}

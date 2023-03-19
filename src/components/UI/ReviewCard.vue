@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../../public/css/review_card.css";
+@import "@/assets/styles/review_card.css";
 </style>

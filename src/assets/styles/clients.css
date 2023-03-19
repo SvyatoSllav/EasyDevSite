@@ -2,9 +2,16 @@
     background-color: #fff;
 }
 
+.clients__tags-wrapper {
+    max-width: 1161px;
+    margin: 0 auto;
+}
+
 .client-tags {
     padding-top: 165px;
-    margin: 0 140px 70px auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    /* margin: 0 0px 70px auto; */
     width: 252px;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <button class="contact-btn">оставить заявку</button>
+  <a href="#contact"><button class="contact-btn">оставить заявку</button></a>
 </template>
 
 <script>

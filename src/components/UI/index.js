@@ -3,6 +3,7 @@ import GradientTags from "@/components/UI/GradientTags";
 import ReviewCard from "@/components/UI/ReviewCard";
 import ContactButton from "@/components/UI/ContactButton";
 import PortfolioItem from "@/components/UI/PortfolioItem";
+import ServiceItem from "@/components/UI/ServiceItem";
 
 export default [
   AboutText,
@@ -10,4 +11,5 @@ export default [
   ReviewCard,
   ContactButton,
   PortfolioItem,
+  ServiceItem,
 ];

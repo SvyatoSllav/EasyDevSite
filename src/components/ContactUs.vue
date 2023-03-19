@@ -1,5 +1,5 @@
 <template>
-  <section class="contact" id="contact">
+  <section class="contact">
     <div class="contact__wrapper">
       <div class="contact__phone">
         <img
@@ -8,7 +8,7 @@
           alt=""
         />
       </div>
-      <div class="contact__form">
+      <div class="contact__form" id="contact">
         <h2 class="contact__title">Напишите нам</h2>
         <h3 class="contact__subtitle">
           Успех вашего будущего проекта начинается здесь!Найдем решение для

@@ -1,0 +1,45 @@
+.footer {
+    background-color: #fff;
+}
+
+.footer__wrapper {
+    max-width: 1161px;
+    padding-top: 66px;
+    margin: 0 auto;
+}
+
+.footer__tags {
+    width: 230px;
+    margin-left: 20px;
+}
+
+.footer__tags h3:last-child {
+    text-align: end;
+}
+
+.footer__title {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    margin: 50px 0;
+}
+
+.footer__contacts {
+    margin-top: 50px;
+    font-family: 'Unbounded-Light';
+    font-weight: 100;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+.footer__contacts a {
+    color: #DE6DF1;
+}
+
+.footer__phone-contact {}
+
+.footer__mail-contact {}

@@ -2,6 +2,7 @@
     .header {
         margin-top: 38px;
         padding-top: 22px;
+        border-radius: 30px;
     }
 
     .container {
@@ -33,9 +34,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .header {
-        border-radius: 30px;
-    }
+    .header {}
 
     .header__title {
         max-width: 350px;
@@ -54,99 +53,116 @@
     .header {
         margin-top: 17px;
     }
+
+    .container {
+        padding: 0 13px;
+    }
+
+    .header__nav-wrapper {
+        padding: 0;
+    }
+
     .header__text-animation {
         margin: 31px 0 0;
     }
+
     .header__animated-texts {
         height: 66px;
     }
+
     .header__border-square_bottom-right {
         top: 77px;
     }
+
     .header__border-square_bottom-left {
         top: 68px;
     }
+
     .header__animation-text {
         font-size: 32px;
     }
+
     .header__content {
         padding-bottom: 339px;
     }
+
     @keyframes FirstSlide {
         100% {
             top: -300px;
         }
     }
-    
+
     @keyframes SecondSlide {
         100% {
             top: -300px;
         }
     }
-    
+
     @keyframes ThidSlide {
         100% {
             top: -340px;
         }
     }
-    
+
     @keyframes FourthSlide {
         100% {
             top: -290px;
         }
     }
-    
+
     @keyframes FifthSlide {
         100% {
             top: -250px;
         }
     }
+
     @keyframes scaleWidth {
         0% {
             width: 330px;
         }
-    
+
         20% {
             width: 210px;
         }
-    
+
         40% {
             width: 200px;
         }
-    
+
         60% {
             width: 200px;
         }
-    
+
         80% {
             width: 200px;
         }
-    
+
         100% {
             width: 330px;
         }
     }
+
     @keyframes followBorder {
         0% {
             left: 325px;
         }
-    
+
         20% {
             left: 205px;
         }
-    
+
         40% {
             left: 195px;
         }
-    
+
         60% {
             left: 195px;
         }
-    
+
         80% {
             left: 195px;
         }
-    
+
         100% {
             left: 325px;
         }

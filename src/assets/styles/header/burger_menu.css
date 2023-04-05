@@ -1,0 +1,20 @@
+.burger {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.burger span {
+    background-color: #DE6DF1;
+    display: block;
+    width: 66px;
+    height: 10px;
+}
+
+.burger__top-line {}
+
+.burger__middle-line {}
+
+.burger__bottom-line {}

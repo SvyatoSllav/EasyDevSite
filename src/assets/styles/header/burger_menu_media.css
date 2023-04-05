@@ -1,0 +1,7 @@
+@media screen and (max-width: 425px) {
+    .burger span {
+        width: 39px;
+        height: 5px;
+        color: black;
+    }
+}

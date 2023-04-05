@@ -81,5 +81,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../public/css/about.css";
+@import "@/assets/styles/about.css";
 </style>

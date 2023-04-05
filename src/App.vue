@@ -82,13 +82,18 @@ export default {
   font-family: "Righteous-Regular";
   src: url(../public/fonts/Righteous-Regular.ttf);
 }
+:root {
+  --title-fz: 50px;
+  --sub_title-fz: 28px;
+  --main_text-fz: 28px;
+  --review_text-fz: 16px;
+}
 html {
   scroll-behavior: smooth;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #fef6ff;
-  margin-top: 43px;
 }
 *,
 *::after,
@@ -134,5 +139,23 @@ a {
   background-color: #3587bf;
   background: rgba(222, 109, 241, 0.3);
   filter: blur(225px);
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --title-fz: 30px;
+    --sub_title-fz: 20px;
+    --main_text-fz: 28px;
+    --review_text-fz: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pink-circle {
+    left: -160px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .pink-circle {
+    left: -270px;
+  }
 }
 </style>

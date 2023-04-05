@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="header__nav-wrapper">
-        <img src="img/logo.jpg" alt="" class="logo" />
+        <img :src="logoImg" alt="" class="logo" />
         <div class="header__nav-items">
           <a href="#about" class="header__nav-link">
             <h2 class="header__nav-item">О нас</h2>
@@ -22,6 +22,7 @@
             Оставить заявку
           </a>
         </button>
+        <burger-menu></burger-menu>
       </div>
       <div class="header__text-animation">
         <div class="header__border-square header__border-square_top-left"></div>
@@ -66,11 +67,7 @@
         <h1 class="header__title">
           Разработка<br />веб приложений<br />и автоматизация бизнес-процессов
         </h1>
-        <img
-          src="../../public/img/header_img.png"
-          alt="header_img"
-          class="header__img"
-        />
+        <img :src="headerImg" alt="header_img" class="header__img" />
       </div>
     </div>
   </header>
@@ -78,9 +75,27 @@
 
 <script>
 export default {
-  data() {},
+  data() {
+    return {
+      headerImg: require(`../assets/img/header_img_${
+        window.innerWidth > 834
+          ? "desktop"
+          : window.innerWidth > 475
+          ? "tablet"
+          : "mobile"
+      }.png`),
+      logoImg: require(`../assets/img/logo_${
+        window.innerWidth > 1023
+          ? "desktop"
+          : window.innerWidth > 425
+          ? "tablet"
+          : "mobile"
+      }.svg`),
+    };
+  },
 };
 </script>
 <style>
-@import "@/assets/styles/header.css";
+@import "@/assets/styles/header/header.css";
+@import "@/assets/styles/header/header_media.css";
 </style>

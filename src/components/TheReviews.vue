@@ -109,5 +109,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../public/css/reviews.css";
+@import "@/assets/styles/reviews.css";
 </style>

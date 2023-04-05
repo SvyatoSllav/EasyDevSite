@@ -30,7 +30,7 @@
     font-family: 'Unbounded';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: var(--title-fz);
     line-height: 60px;
     color: #FFFFFF;
 }
@@ -40,7 +40,7 @@
     font-family: 'Golos-Text-Regular';
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    font-size: var(--sub_title-fz);
     line-height: 34px;
     color: #FFFFFF;
 }
@@ -54,7 +54,7 @@
     font-family: 'Golos-Text-Regular';
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    font-size: var(--sub_title-fz);
     line-height: 34px;
     color: #C9C9C9;
 }

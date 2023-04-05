@@ -1,0 +1,154 @@
+@media screen and (max-width: 1160px) {
+    .header {
+        margin-top: 38px;
+        padding-top: 22px;
+    }
+
+    .container {
+        padding: 0 37px;
+    }
+
+    .header__content {
+        display: block;
+        padding-bottom: 281px;
+    }
+
+    .header__title {
+        max-width: 580px;
+        margin-top: 16px;
+    }
+
+    .header__img {
+        position: absolute;
+        right: 20px;
+    }
+
+    .header__nav-items {
+        display: none;
+    }
+
+    .header__nav_contact-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        border-radius: 30px;
+    }
+
+    .header__title {
+        max-width: 350px;
+        margin-top: 28px;
+        line-height: 42px;
+    }
+
+    .header__img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        margin-top: 17px;
+    }
+    .header__text-animation {
+        margin: 31px 0 0;
+    }
+    .header__animated-texts {
+        height: 66px;
+    }
+    .header__border-square_bottom-right {
+        top: 77px;
+    }
+    .header__border-square_bottom-left {
+        top: 68px;
+    }
+    .header__animation-text {
+        font-size: 32px;
+    }
+    .header__content {
+        padding-bottom: 339px;
+    }
+    @keyframes FirstSlide {
+        100% {
+            top: -300px;
+        }
+    }
+    
+    @keyframes SecondSlide {
+        100% {
+            top: -300px;
+        }
+    }
+    
+    @keyframes ThidSlide {
+        100% {
+            top: -340px;
+        }
+    }
+    
+    @keyframes FourthSlide {
+        100% {
+            top: -290px;
+        }
+    }
+    
+    @keyframes FifthSlide {
+        100% {
+            top: -250px;
+        }
+    }
+    @keyframes scaleWidth {
+        0% {
+            width: 330px;
+        }
+    
+        20% {
+            width: 210px;
+        }
+    
+        40% {
+            width: 200px;
+        }
+    
+        60% {
+            width: 200px;
+        }
+    
+        80% {
+            width: 200px;
+        }
+    
+        100% {
+            width: 330px;
+        }
+    }
+    @keyframes followBorder {
+        0% {
+            left: 325px;
+        }
+    
+        20% {
+            left: 205px;
+        }
+    
+        40% {
+            left: 195px;
+        }
+    
+        60% {
+            left: 195px;
+        }
+    
+        80% {
+            left: 195px;
+        }
+    
+        100% {
+            left: 325px;
+        }
+    }
+}

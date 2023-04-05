@@ -10,11 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    width: 104px;
-    height: 104px;
+    padding: 0 30px;
 }
 
 .header__nav-items {
@@ -38,7 +34,7 @@
 }
 
 .header__nav-item:hover {
-    color:#DE6DF1;
+    color: #DE6DF1;
 }
 
 .header__nav_item:last-child {
@@ -97,6 +93,11 @@
     animation: followBorder 5s ease infinite;
 }
 
+.header__border-square_bottom-left {
+    top: 84px;
+    right: 2px;
+}
+
 .header__border-square_bottom-right {
     top: 92px;
     left: 285px;
@@ -127,11 +128,6 @@
     100% {
         left: 425px;
     }
-}
-
-.header__border-square_bottom-left {
-    top: 84px;
-    right: 2px;
 }
 
 .header__animated-texts {
@@ -284,7 +280,7 @@
 .header__title {
     font-family: 'Unbounded';
     font-weight: 400;
-    font-size: 50px;
+    font-size: var(--title-fz);
     line-height: 70px;
     color: #161C2D;
 }

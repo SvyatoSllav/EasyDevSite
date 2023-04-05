@@ -48,6 +48,7 @@
 .active {
     background: #DE6DF1;
     border-radius: 15px;
+    color: #fff;
 }
 
 .about__streak {
@@ -56,6 +57,11 @@
     height: 3px;
     left: 619px;
     top: 104px;
+}
+
+.about__text {
+    padding-top: 80px;
+    padding-left: 161px;
 }
 
 .fade-enter-active,

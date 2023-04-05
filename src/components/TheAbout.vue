@@ -42,7 +42,7 @@
           </button>
         </div>
         <transition name="fade" mode="out-in">
-          <about-text :key="this.text">
+          <about-text class="about__text" :key="this.text">
             {{ this.text }}
           </about-text>
         </transition>
@@ -81,5 +81,5 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/styles/about.css";
+@import "@/assets/styles/about/about.css";
 </style>

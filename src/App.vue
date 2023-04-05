@@ -4,14 +4,14 @@
   </div>
   <div class="pink-circle"></div>
   <the-header></the-header>
-  <!-- <the-sidebar></the-sidebar> -->
+  <the-sidebar></the-sidebar>
   <!-- <the-about></the-about> -->
   <!-- <the-reviews></the-reviews>
   <the-clients></the-clients>
   <contact-us></contact-us>
   <the-portfolio></the-portfolio>
-  <the-services></the-services>
-  <the-footer></the-footer> -->
+  <the-services></the-services> -->
+  <!-- <the-footer></the-footer> -->
 </template>
 
 <script>
@@ -93,7 +93,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #fef6ff;
 }
 *,

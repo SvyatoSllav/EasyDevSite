@@ -22,7 +22,6 @@
             Оставить заявку
           </a>
         </button>
-        <burger-menu></burger-menu>
       </div>
       <div class="header__text-animation">
         <div class="header__border-square header__border-square_top-left"></div>

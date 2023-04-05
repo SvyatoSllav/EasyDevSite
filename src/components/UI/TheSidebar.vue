@@ -38,7 +38,7 @@ export default {
   name: "the-sidebar",
   data() {
     return {
-      showSidebar: true,
+      showSidebar: false,
     };
   },
 };

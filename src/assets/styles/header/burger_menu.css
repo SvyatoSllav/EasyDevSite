@@ -1,4 +1,5 @@
 .burger {
+    visibility: hidden;
     position: fixed;
     right: 37px;
     top: 76px;

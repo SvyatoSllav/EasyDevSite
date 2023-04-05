@@ -1,4 +1,7 @@
 .burger {
+    position: fixed;
+    right: 37px;
+    top: 76px;
     display: flex;
     width: 66px;
     height: 47px;

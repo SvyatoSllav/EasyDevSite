@@ -4,35 +4,36 @@
   </div>
   <div class="pink-circle"></div>
   <the-header></the-header>
-  <the-about></the-about>
-  <the-reviews></the-reviews>
+  <!-- <the-sidebar></the-sidebar> -->
+  <!-- <the-about></the-about> -->
+  <!-- <the-reviews></the-reviews>
   <the-clients></the-clients>
   <contact-us></contact-us>
   <the-portfolio></the-portfolio>
   <the-services></the-services>
-  <the-footer></the-footer>
+  <the-footer></the-footer> -->
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader";
-import TheAbout from "@/components/TheAbout";
-import TheReviews from "@/components/TheReviews";
-import TheClients from "@/components/TheClients";
-import ContactUs from "@/components/ContactUs";
-import ThePortfolio from "@/components/ThePortfolio";
-import TheServices from "@/components/TheServices";
-import TheFooter from "@/components/TheFooter";
+// import TheAbout from "@/components/TheAbout";
+// import TheReviews from "@/components/TheReviews";
+// import TheClients from "@/components/TheClients";
+// import ContactUs from "@/components/ContactUs";
+// import ThePortfolio from "@/components/ThePortfolio";
+// import TheServices from "@/components/TheServices";
+// import TheFooter from "@/components/TheFooter";
 export default {
   data() {},
   components: {
     TheHeader,
-    TheAbout,
-    TheReviews,
-    TheClients,
-    ContactUs,
-    ThePortfolio,
-    TheServices,
-    TheFooter,
+    // TheAbout,
+    // TheReviews,
+    // TheClients,
+    // ContactUs,
+    // ThePortfolio,
+    // TheServices,
+    // TheFooter,
   },
 };
 </script>

@@ -5,6 +5,7 @@ import ContactButton from "@/components/UI/ContactButton";
 import PortfolioItem from "@/components/UI/PortfolioItem";
 import ServiceItem from "@/components/UI/ServiceItem";
 import BurgerMenu from "@/components/UI/BurgerMenu";
+import TheSidebar from "@/components/UI/TheSidebar";
 
 export default [
   AboutText,
@@ -14,4 +15,5 @@ export default [
   PortfolioItem,
   ServiceItem,
   BurgerMenu,
+  TheSidebar,
 ];

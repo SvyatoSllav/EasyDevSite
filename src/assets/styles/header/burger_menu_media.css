@@ -1,5 +1,7 @@
 @media screen and (max-width: 425px) {
     .burger {
+        top: 50px;
+        right: 13px;
         width: 39px;
         height: 28px;
     }

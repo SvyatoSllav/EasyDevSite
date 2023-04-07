@@ -43,6 +43,7 @@
     line-height: 33px;
     text-transform: uppercase;
     padding: 22px 0px 22px 20px;
+    z-index: 1;
 }
 
 .active {
@@ -62,6 +63,7 @@
 .mobile-about__text {
     margin-top: 20px;
     padding-left: 20px;
+    width: 566px;
 }
 
 .fade-enter-active,

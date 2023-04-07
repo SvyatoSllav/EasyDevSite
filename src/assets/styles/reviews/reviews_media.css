@@ -1,0 +1,42 @@
+@media screen and (max-width: 1160px) {
+    .reviews__tags {
+        padding: 31px 0 0 37px;
+        margin-left: 0;
+    }
+    .about__experience {
+        padding-bottom: 184px;
+    }
+    .reviews__line {
+        top: 1621px;
+        left: 0;
+        transform: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .reviews__line {
+        top: 1661px;
+        left: 0;
+        transform: translateX(-20%);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about__experience {
+        padding-bottom: 60px;
+    }
+    .reviews__line {
+        top: 1471px;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .reviews__line {
+        top: 1581px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -8,11 +8,11 @@
   <the-about v-if="isDesktop"></the-about>
   <the-about-mobile v-else></the-about-mobile>
   <the-reviews></the-reviews>
-  <the-clients></the-clients>
+  <!-- <the-clients></the-clients>
   <contact-us></contact-us>
   <the-portfolio></the-portfolio>
   <the-services></the-services>
-  <the-footer></the-footer>
+  <the-footer></the-footer> -->
 </template>
 
 <script>
@@ -20,11 +20,11 @@ import TheHeader from "@/components/TheHeader";
 import TheAbout from "@/components/TheAbout";
 import TheAboutMobile from "@/components/TheAboutMobile";
 import TheReviews from "@/components/TheReviews";
-import TheClients from "@/components/TheClients";
-import ContactUs from "@/components/ContactUs";
-import ThePortfolio from "@/components/ThePortfolio";
-import TheServices from "@/components/TheServices";
-import TheFooter from "@/components/TheFooter";
+// import TheClients from "@/components/TheClients";
+// import ContactUs from "@/components/ContactUs";
+// import ThePortfolio from "@/components/ThePortfolio";
+// import TheServices from "@/components/TheServices";
+// import TheFooter from "@/components/TheFooter";
 export default {
   data() {
     return {
@@ -36,11 +36,11 @@ export default {
     TheAbout,
     TheAboutMobile,
     TheReviews,
-    TheClients,
-    ContactUs,
-    ThePortfolio,
-    TheServices,
-    TheFooter,
+    // TheClients,
+    // ContactUs,
+    // ThePortfolio,
+    // TheServices,
+    // TheFooter,
   },
 };
 </script>

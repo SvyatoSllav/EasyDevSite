@@ -27,6 +27,10 @@
     .about_selections {
         padding-left: 0px;
     }
+
+    .mobile-about__text {
+        max-width: 380px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -43,5 +47,8 @@
         white-space: nowrap;
         padding: 13px 0px 13px 20px;
         font-size: 18px;
+    }
+    .mobile-about__text {
+        max-width: 320px;
     }
 }

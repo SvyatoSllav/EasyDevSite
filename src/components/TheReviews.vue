@@ -13,7 +13,7 @@
           }"
           :modules="modules"
           class="mySwiper"
-          :slides-per-view="3"
+          :slides-per-view="reviewAmount"
           :space-between="50"
         >
           <swiperSlide :key="post.id" v-for="post in posts">
@@ -42,11 +42,7 @@
           />
         </div>
       </div>
-      <img
-        src="../../public/img/reviews_line.png"
-        alt=""
-        class="reviews__line"
-      />
+      <img :src="lineImg" alt="" class="reviews__line" />
     </div>
   </section>
 </template>
@@ -64,6 +60,15 @@ export default {
   },
   data() {
     return {
+      lineImg: require(`../assets/img/reviews_line_${
+        window.innerWidth > 1025
+          ? "desktop"
+          : window.innerWidth > 450
+          ? "tablet"
+          : "mobile"
+      }.png`),
+      reviewAmount:
+        window.innerWidth > 1025 ? 3 : window.innerWidth > 450 ? 2 : 1,
       posts: [
         {
           id: 1,
@@ -109,5 +114,6 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/styles/reviews.css";
+@import "@/assets/styles/reviews/reviews.css";
+@import "@/assets/styles/reviews/reviews_media.css";
 </style>

@@ -86,14 +86,14 @@ export default {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 25px;
   }
+  .services__contact-link {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   .services__items {
     margin: 50px 37px 0;
-  }
-  .services__contact-link {
-    justify-content: center;
   }
 }
 </style>

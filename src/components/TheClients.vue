@@ -19,5 +19,43 @@ export default {};
 </script>
 
 <style scoped>
-@import "@/assets/styles/clients.css";
+.clients {
+  background-color: #fff;
+}
+
+.clients__tags-wrapper {
+  max-width: 1161px;
+  margin: 0 auto;
+}
+
+.client-tags {
+  padding-top: 165px;
+  margin-left: auto;
+  margin-bottom: 70px;
+  width: 252px;
+}
+
+.client-tags h3:nth-child(2) {
+  text-align: center;
+}
+
+.clients-banner-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.clients__banner {
+  animation: slide 5s linear infinite;
+  margin-left: 165px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-1570px);
+  }
+}
 </style>

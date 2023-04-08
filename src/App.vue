@@ -12,7 +12,7 @@
   <contact-us></contact-us>
   <the-portfolio></the-portfolio>
   <the-services></the-services>
-  <!-- <the-footer></the-footer> -->
+  <the-footer></the-footer>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ import TheClients from "@/components/TheClients";
 import ContactUs from "@/components/ContactUs";
 import ThePortfolio from "@/components/ThePortfolio";
 import TheServices from "@/components/TheServices";
-// import TheFooter from "@/components/TheFooter";
+import TheFooter from "@/components/TheFooter";
 export default {
   data() {
     return {
@@ -40,7 +40,7 @@ export default {
     ContactUs,
     ThePortfolio,
     TheServices,
-    // TheFooter,
+    TheFooter,
   },
 };
 </script>

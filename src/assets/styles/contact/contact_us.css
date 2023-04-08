@@ -12,18 +12,16 @@
 
 .contact__phone {
     max-height: 781px;
+    position: relative;
+    top: -122px;
 }
 
 .contact__form {
+    padding: 75px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 571px;
-}
-
-.contact__phone-img {
-    position: relative;
-    top: -164px;
 }
 
 .contact__title {

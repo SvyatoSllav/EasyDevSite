@@ -12,11 +12,6 @@
 
 .about__title-tags {
     padding-top: 100px;
-    margin-left: auto;
-}
-
-.about__title-tags h3:nth-child(2) {
-    text-align: center;
 }
 
 .about__experience {

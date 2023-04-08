@@ -1,8 +1,9 @@
 <template>
-  <div class="about__title">
+  <div>
     <h3 class="rainbow-tag">
       <slot name="first_tag"></slot>
     </h3>
+    <br />
     <h3 class="rainbow-tag">
       <slot name="second_tag"></slot>
     </h3>
@@ -27,6 +28,11 @@ export default {
   font-size: 28px;
   line-height: 33px;
   white-space: nowrap;
+  display: inline-block;
+}
+
+.rainbow-tag:last-child {
+  margin-left: 20px;
 }
 .rainbow-tag::before {
   content: "<";

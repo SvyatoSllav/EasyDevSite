@@ -8,7 +8,7 @@
       <div class="porftolio__items">
         <portfolio-item
           :item="item"
-          v-for="item in portfolioItems"
+          v-for="item in portfolioItems.slice(0, itemsAmount)"
           :key="item.id"
         >
         </portfolio-item>
@@ -50,6 +50,8 @@ export default {
           link: "https://github.com/EasyDevCompany/BoostBuffet",
         },
       ],
+      itemsAmount:
+        window.innerWidth > 1160 ? 4 : window.innerWidth > 767 ? 2 : 3,
     };
   },
   computed: {
@@ -60,6 +62,46 @@ export default {
 };
 </script>
 
-<style scoped>
-@import "../assets/styles/portfolio.css";
+<style>
+.portfolio {
+  background-color: #ebf6fe;
+  padding-top: 54px;
+}
+
+.porfolio__wrapper {
+  max-width: 1161px;
+  margin: 0 auto;
+}
+
+.portfolio__tags {
+  margin-left: 40px;
+  /* text-align: start; */
+  /* margin-left: 20px; */
+}
+
+.porftolio__items {
+  margin: -18px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.portfolio__contact-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact__link {
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 1160px) {
+  .porftolio__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .portfolio__contact-link {
+    justify-content: center;
+  }
+}
 </style>

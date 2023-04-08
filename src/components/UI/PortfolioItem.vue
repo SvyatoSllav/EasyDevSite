@@ -48,6 +48,7 @@ export default {
   background-color: #fff;
   padding: 7px 11px;
   border-radius: 7px;
+  z-index: 1;
 }
 
 .porftolio__item-name {

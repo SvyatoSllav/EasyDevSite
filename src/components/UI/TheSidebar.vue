@@ -28,7 +28,7 @@
             <a href="https://t.me/EasyDevVi">TG Виталий</a>
           </div>
         </div>
-        <a @click="this.showSidebar = false" href="#contact">
+        <a class="btn-link" @click="this.showSidebar = false" href="#contact">
           <button class="contact-btn"><slot>оставить заявку</slot></button>
         </a>
       </sidebar>
@@ -49,8 +49,80 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/styles/sidebar/sidebar.css";
-@import "@/assets/styles/sidebar/sidebar_media.css";
+.sidebar__wrapper {
+  top: 0;
+  right: 0;
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  width: 634px;
+  height: 100%;
+  background-color: #de6df1;
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 200%;
+  padding-top: 56px;
+  padding-left: 41px;
+}
+
+.sidebar__close-btn {
+  position: absolute;
+  top: 60px;
+  right: 47px;
+  cursor: pointer;
+}
+
+.sidebar__nav {
+  margin-bottom: 110px;
+}
+
+.sidebar__nav-item {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.sidebar__contacts {
+  color: black;
+}
+
+.sidebar__contacts a {
+  margin-bottom: 30px;
+}
+
+.sidebar__contact-item {
+  margin-bottom: 30px;
+}
+
+.sidebar__contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 .contact-btn {
   margin-top: 50px;
   cursor: pointer;
@@ -66,10 +138,41 @@ export default {
   color: #de6df1;
   transition: 0.3s ease;
 }
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 300px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 48px 0 0 17px;
+  }
 
-/* .contact-btn:hover {
-  color: #de6df1;
-  border: 2px solid black;
-  background-color: ;
-} */
+  .sidebar__nav-item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sidebar__close-btn {
+    width: 12px;
+    height: 14px;
+  }
+  .btn-link {
+    width: 100%;
+  }
+  .contact-btn {
+    white-space: nowrap;
+    padding: 22px 28px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .contact-btn {
+    padding: 14px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact-btn {
+    padding: 14px 10px;
+  }
+}
 </style>

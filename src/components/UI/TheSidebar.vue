@@ -54,7 +54,7 @@ export default {
   right: 0;
   position: fixed;
   width: 200%;
-  height: 100%;
+  height: 200%;
   background: rgba(0, 0, 0, 0.65);
   z-index: 2;
 }

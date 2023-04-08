@@ -18,28 +18,32 @@
           <input
             v-model="name"
             type="text"
-            class="contact__name-field contact__form-field"
+            class="contact__form-field"
             placeholder="Имя"
             required
           /><br />
           <input
             v-model="email"
             type="email"
-            class="contact__email-field contact__form-field"
+            class="contact__form-field"
             placeholder="Email"
             required
           /><br />
           <input
             v-model="phone"
             type="tel"
-            class="contact__phone-field contact__form-field"
+            class="contact__form-field"
             placeholder="Телефон"
             required
           /><br />
-          <contact-button
-            class="contact__submit-btn"
-            @click="sendFormData"
-          ></contact-button>
+          <input
+            v-model="telegram"
+            type="text"
+            class="contact__form-field"
+            placeholder="Telegram"
+            required
+          /><br />
+          <contact-button @click="sendFormData"></contact-button>
         </form>
       </div>
     </div>
@@ -53,6 +57,7 @@ export default {
       name: "",
       email: "",
       phone: "",
+      telegram: "",
     };
   },
   methods: {
@@ -60,12 +65,13 @@ export default {
       console.log(this.name);
       console.log(this.email);
       console.log(this.phone);
-      this.name = this.email = this.phone = "";
+      this.name = this.email = this.phone = this.telegram = "";
     },
   },
 };
 </script>
 
 <style scoped>
-@import "../assets/styles/contact_us.css";
+@import "../assets/styles/contact/contact_us.css";
+@import "../assets/styles/contact/contact_us_media.css";
 </style>

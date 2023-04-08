@@ -37,6 +37,7 @@
 
 .contact__subtitle {
     margin-top: 25px;
+    margin-bottom: 40px;
     font-family: 'Golos-Text-Regular';
     font-style: normal;
     font-weight: 400;
@@ -49,7 +50,7 @@
     background: #FFFFFF;
     border: none;
     border-radius: 15px;
-    width: 553px;
+    width: 100%;
     padding: 25px 0 25px 34px;
     font-family: 'Golos-Text-Regular';
     font-style: normal;
@@ -57,20 +58,13 @@
     font-size: var(--sub_title-fz);
     line-height: 34px;
     color: #C9C9C9;
+    margin-bottom: 25px;
+}
+
+.contact__form input:nth-child(7) {
+    margin-bottom: 50px;
 }
 
 .contact__form-field:focus {
     outline: none;
-}
-
-.contact__name-field {
-    margin-top: 40px;
-}
-
-.contact__email-field {
-    margin: 25px 0;
-}
-
-.contact__phone-field {
-    margin-bottom: 50px;
 }

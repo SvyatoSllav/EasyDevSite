@@ -28,6 +28,9 @@
             <a href="https://t.me/EasyDevVi">TG Виталий</a>
           </div>
         </div>
+        <a @click="this.showSidebar = false" href="#contact">
+          <button class="contact-btn"><slot>оставить заявку</slot></button>
+        </a>
       </sidebar>
     </div>
   </transition>
@@ -39,6 +42,7 @@ export default {
   data() {
     return {
       showSidebar: false,
+      whiteColor: "#fff",
     };
   },
 };
@@ -47,4 +51,25 @@ export default {
 <style scoped>
 @import "@/assets/styles/sidebar/sidebar.css";
 @import "@/assets/styles/sidebar/sidebar_media.css";
+.contact-btn {
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 25px 135px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--sub_title-fz);
+  line-height: 33px;
+  color: #de6df1;
+  transition: 0.3s ease;
+}
+
+/* .contact-btn:hover {
+  color: #de6df1;
+  border: 2px solid black;
+  background-color: ;
+} */
 </style>

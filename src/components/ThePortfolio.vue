@@ -74,7 +74,7 @@ export default {
 }
 
 .portfolio__tags {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .porftolio__items {

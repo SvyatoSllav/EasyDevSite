@@ -11,8 +11,8 @@
   <the-clients></the-clients>
   <contact-us></contact-us>
   <the-portfolio></the-portfolio>
-  <!-- <the-services></the-services>
-  <the-footer></the-footer> -->
+  <the-services></the-services>
+  <!-- <the-footer></the-footer> -->
 </template>
 
 <script>
@@ -23,7 +23,7 @@ import TheReviews from "@/components/TheReviews";
 import TheClients from "@/components/TheClients";
 import ContactUs from "@/components/ContactUs";
 import ThePortfolio from "@/components/ThePortfolio";
-// import TheServices from "@/components/TheServices";
+import TheServices from "@/components/TheServices";
 // import TheFooter from "@/components/TheFooter";
 export default {
   data() {
@@ -39,7 +39,7 @@ export default {
     TheClients,
     ContactUs,
     ThePortfolio,
-    // TheServices,
+    TheServices,
     // TheFooter,
   },
 };

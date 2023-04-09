@@ -45,7 +45,7 @@ export default {};
 }
 
 .clients__banner {
-  animation: slide 5s linear infinite;
+  animation: slide 10s linear infinite;
   margin-left: 165px;
 }
 

@@ -83,7 +83,6 @@ export default {
 }
 .services__content-wrapper {
   display: flex;
-  /* justify-content: space-between; */
   padding: 85px 44px 85px 110px;
 }
 .services__texts {
@@ -100,8 +99,6 @@ export default {
   line-height: 34px;
   margin-top: 50px;
   max-width: 622px;
-}
-.services__img {
 }
 .service__btn {
   margin-left: 110px;

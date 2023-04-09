@@ -25,7 +25,7 @@ export default {
   margin-bottom: 15px;
 }
 .service__achivement-subtitle {
-  font-family: "Golos";
+  font-family: "Golos-Text-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

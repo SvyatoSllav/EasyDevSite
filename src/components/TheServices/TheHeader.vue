@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="header__nav-wrapper">
-        <img :src="logoImg" alt="" class="logo" />
+        <a href="#"><img :src="logoImg" alt="" class="logo" /></a>
         <div class="header__nav-items">
           <a href="#about" class="header__nav-link">
             <h2 class="header__nav-item">О нас</h2>
@@ -13,7 +13,7 @@
           <a href="#" class="header__nav-link">
             <h2 class="header__nav-item">Услуги</h2>
           </a>
-          <a href="#" class="header__nav-link">
+          <a href="#footer" class="header__nav-link">
             <h2 class="header__nav-item">Контакты</h2>
           </a>
         </div>

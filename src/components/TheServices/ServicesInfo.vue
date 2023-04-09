@@ -26,7 +26,7 @@
           </div>
           <p class="services__text-title">
             Принимайте правильные управленческие решения на основе данных
-            аудита.Описание и дополнительная информация.
+            аудита. Описание и дополнительная информация.
           </p>
         </div>
         <img :src="servicesImg" alt="" class="services__img" />
@@ -83,7 +83,7 @@ export default {
 }
 .services__content-wrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 85px 44px 85px 110px;
 }
 .services__texts {
@@ -99,6 +99,7 @@ export default {
   font-size: 28px;
   line-height: 34px;
   margin-top: 50px;
+  max-width: 622px;
 }
 .services__img {
 }

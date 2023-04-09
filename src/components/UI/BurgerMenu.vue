@@ -1,5 +1,5 @@
 <template>
-  <div class="burger">
+  <div class="burger" :style="burgerStyles">
     <span class="burger__line"></span><span class="burger__line"></span
     ><span class="burger__line"></span>
   </div>
@@ -8,24 +8,33 @@
 <script>
 export default {
   name: "burger-menu",
+  props: {
+    burgerTop: {
+      type: String,
+      required: false,
+      default: "79px",
+    },
+  },
+  computed: {
+    burgerStyles() {
+      return {
+        visibility: window.innerWidth > 1026 ? "hidden" : "visible",
+        position: "fixed",
+        right: "37px",
+        top: this.burgerTop,
+        display: "flex",
+        width: window.innerWidth > 475 ? "66px" : "39px",
+        height: window.innerWidth > 475 ? "47px" : "28px",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        zIndex: 2,
+      };
+    },
+  },
 };
 </script>
 
 <style scoped>
-.burger {
-  visibility: hidden;
-  position: fixed;
-  right: 37px;
-  top: 76px;
-  display: flex;
-  width: 66px;
-  height: 47px;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 2;
-}
-
 .burger span {
   background-color: #de6df1;
   display: block;
@@ -40,10 +49,7 @@ export default {
 
 @media screen and (max-width: 425px) {
   .burger {
-    top: 50px;
     right: 13px;
-    width: 39px;
-    height: 28px;
   }
   .burger span {
     width: 39px;

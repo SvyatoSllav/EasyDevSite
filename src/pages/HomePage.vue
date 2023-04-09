@@ -5,7 +5,7 @@
   </div>
   <div class="pink-circle"></div>
   <the-header></the-header>
-  <the-sidebar></the-sidebar>
+  <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <the-about v-if="isDesktop"></the-about>
   <the-about-mobile v-else></the-about-mobile>
   <the-reviews></the-reviews>
@@ -30,6 +30,12 @@ export default {
   data() {
     return {
       isDesktop: window.innerWidth > 1160 ? true : false,
+      burgerTop:
+        window.innerWidth > 1160
+          ? 0
+          : window.innerWidth > 476
+          ? "71px"
+          : "50px",
     };
   },
   components: {

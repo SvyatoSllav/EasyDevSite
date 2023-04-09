@@ -1,5 +1,8 @@
 <template>
-  <burger-menu @click="this.showSidebar = true"></burger-menu>
+  <burger-menu
+    :burgerTop="burgerTop"
+    @click="this.showSidebar = true"
+  ></burger-menu>
   <transition name="slide-fade">
     <div class="sidebar__wrapper" v-show="showSidebar">
       <sidebar class="sidebar">
@@ -39,6 +42,12 @@
 <script>
 export default {
   name: "the-sidebar",
+  props: {
+    burgerTop: {
+      type: Number,
+      required: false,
+    },
+  },
   data() {
     return {
       showSidebar: false,

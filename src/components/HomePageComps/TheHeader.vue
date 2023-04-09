@@ -84,7 +84,7 @@ export default {
           : "mobile"
       }.png`),
       logoImg: require(`@/assets/img/logo_${
-        window.innerWidth > 1023
+        window.innerWidth > 1160
           ? "desktop"
           : window.innerWidth > 425
           ? "tablet"

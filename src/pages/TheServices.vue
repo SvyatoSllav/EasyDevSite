@@ -1,10 +1,12 @@
 <template>
   <the-header></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
+  <services-info></services-info>
 </template>
 
 <script>
 import TheHeader from "@/components/TheServices/TheHeader";
+import ServicesInfo from "@/components/TheServices/ServicesInfo";
 export default {
   data() {
     return {
@@ -18,8 +20,9 @@ export default {
   },
   components: {
     TheHeader,
+    ServicesInfo,
   },
 };
 </script>
 
-<style scoped></style>
+<style></style>

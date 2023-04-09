@@ -6,6 +6,7 @@ import PortfolioItem from "@/components/UI/PortfolioItem";
 import ServiceItem from "@/components/UI/ServiceItem";
 import BurgerMenu from "@/components/UI/BurgerMenu";
 import TheSidebar from "@/components/UI/TheSidebar";
+import ServiceAchivement from "@/components/UI/ServiceAchivement";
 
 export default [
   AboutText,
@@ -16,4 +17,5 @@ export default [
   ServiceItem,
   BurgerMenu,
   TheSidebar,
+  ServiceAchivement,
 ];

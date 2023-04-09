@@ -1,0 +1,36 @@
+<template>
+  <div class="services__achievement">
+    <h5 class="service__achivement-title"><slot name="title"></slot></h5>
+    <p class="service__achivement-subtitle">
+      <slot name="subtitle"></slot>
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "service-achivement",
+};
+</script>
+
+<style scoped>
+.services__achievement {
+  margin-right: 120px;
+}
+.service__achivement-title {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.service__achivement-subtitle {
+  font-family: "Golos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #555555;
+  max-width: 113px;
+}
+</style>

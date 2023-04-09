@@ -2,6 +2,7 @@
   <the-header></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <services-info></services-info>
+  <contact-form></contact-form>
 </template>
 
 <script>

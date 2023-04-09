@@ -7,6 +7,7 @@ import ServiceItem from "@/components/UI/ServiceItem";
 import BurgerMenu from "@/components/UI/BurgerMenu";
 import TheSidebar from "@/components/UI/TheSidebar";
 import ServiceAchivement from "@/components/UI/ServiceAchivement";
+import ContactForm from "@/components/UI/ContactForm";
 
 export default [
   AboutText,
@@ -18,4 +19,5 @@ export default [
   BurgerMenu,
   TheSidebar,
   ServiceAchivement,
+  ContactForm,
 ];

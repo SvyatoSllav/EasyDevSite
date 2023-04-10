@@ -66,12 +66,14 @@ export default {
 <style scoped>
 .case__slider {
   cursor: pointer;
-  /* padding: 0 20px; */
 }
 .mySwiper {
   text-align: center;
 }
 .case-img {
+  padding: 0 20px;
+  width: 100%;
+  height: auto;
 }
 .case__buttons {
   width: 208px;

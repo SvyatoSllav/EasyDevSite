@@ -7,7 +7,7 @@
     <div class="sidebar__wrapper" v-show="showSidebar">
       <sidebar class="sidebar">
         <img
-          src="../../assets/img/close_btn.svg"
+          src="@/assets/img/close_btn.svg"
           alt=""
           class="sidebar__close-btn"
           @click="this.showSidebar = false"

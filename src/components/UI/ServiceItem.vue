@@ -9,7 +9,7 @@
     <button class="service__item-btn">
       <a href="#contact">
         <img
-          src="../../assets/img/service_button.svg"
+          src="@/assets/img/service_button.svg"
           alt=""
           class="service__item-btn-img"
         />

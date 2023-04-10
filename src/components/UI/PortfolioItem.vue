@@ -6,7 +6,7 @@
       <span class="portfolio__item-link">Полный текст</span>
       <img
         class="portfolio__item-arrow"
-        src="../../assets/img/portfolio_arrow_link.svg"
+        src="@/assets/img/portfolio_arrow_link.svg"
         alt=""
       />
     </a>

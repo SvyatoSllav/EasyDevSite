@@ -56,6 +56,7 @@ export default {};
   --sub_title-fz: 28px;
   --main_text-fz: 28px;
   --review_text-fz: 16px;
+  --title-lh: 60px;
 }
 html {
   scroll-behavior: smooth;
@@ -85,6 +86,7 @@ a {
     --sub_title-fz: 20px;
     --main_text-fz: 28px;
     --review_text-fz: 16px;
+    --title-lh: 40px;
   }
 }
 </style>

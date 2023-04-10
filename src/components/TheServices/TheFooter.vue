@@ -79,7 +79,7 @@ export default {
   font-style: normal;
   font-weight: 400;
   font-size: var(--title-fz);
-  line-height: 60px;
+  line-height: var(--title-lh);
   margin: 50px 0;
 }
 
@@ -148,30 +148,6 @@ export default {
   background-color: v-bind(textColor);
 }
 
-@media screen and (max-width: 767px) {
-  .btn-link {
-    width: 100%;
-    display: block;
-    text-align: center;
-    white-space: nowrap;
-  }
-  .contact-btn {
-    padding: 14px 71px;
-    line-height: 24px;
-  }
-}
-
-@media screen and (max-width: 424px) {
-  .contact-btn {
-    padding: 14px 40px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .contact-btn {
-    padding: 14px 10px;
-  }
-}
-
 @media screen and (max-width: 1160px) {
   .footer__wrapper {
     padding: 30px 36px;
@@ -209,7 +185,23 @@ export default {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
+  .btn-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .contact-btn {
+    padding: 14px 71px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .contact-btn {
+    padding: 14px 40px;
+  }
   .footer__wrapper {
     padding: 30px 12px;
   }
@@ -222,6 +214,11 @@ export default {
 @media screen and (max-width: 374px) {
   .footer__contacts {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact-btn {
+    padding: 14px 10px;
   }
 }
 </style>

@@ -13,9 +13,15 @@
           @click="this.showSidebar = false"
         />
         <div class="sidebar__nav">
-          <a class="sidebar__nav-item">О нас</a><br />
+          <router-link to="/">
+            <p class="sidebar__nav-item">О нас</p>
+            <br />
+          </router-link>
           <a class="sidebar__nav-item">Наши работы</a><br />
-          <a class="sidebar__nav-item">Услуги</a><br />
+          <router-link to="/services">
+            <p class="sidebar__nav-item">Услуги</p>
+            <br />
+          </router-link>
           <a class="sidebar__nav-item">Контакты</a><br />
         </div>
         <div class="sidebar__contacts">

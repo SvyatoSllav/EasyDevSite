@@ -11,8 +11,8 @@
 <script>
 import TheHeader from "@/components/TheServices/TheHeader";
 import ServicesInfo from "@/components/TheServices/ServicesInfo";
-import TheFooter from "@/components/TheServices/TheFooter";
 import TheServices from "@/components/TheServices/TheServices";
+import TheFooter from "@/components/TheServices/TheFooter";
 export default {
   data() {
     return {

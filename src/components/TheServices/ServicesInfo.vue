@@ -50,7 +50,7 @@ export default {
     return {
       servicesTitle: "Разработка ПО",
       servicesImg:
-        window.innerWidth > 1026
+        window.innerWidth > 510
           ? require("@/assets/img/services_img_desktop.jpg")
           : require("@/assets/img/services_img_mobile.jpg"),
     };
@@ -71,7 +71,7 @@ export default {
 }
 
 .services__tags {
-  width: 341px;
+  width: 190px;
   margin-left: auto;
   margin-top: 90px;
 }
@@ -82,6 +82,7 @@ export default {
   font-size: 28px;
   line-height: 33px;
   margin: 50px 0 25px 141px;
+  white-space: nowrap;
 }
 .services__content {
   background-color: #fff;
@@ -108,8 +109,7 @@ export default {
   margin-top: 50px;
   max-width: 622px;
 }
-.service__btn {
-}
+
 .contact-btn {
   margin-left: 110px;
   cursor: pointer;
@@ -131,8 +131,61 @@ export default {
   border: 2px solid black;
   background-color: v-bind(textColor);
 }
+@media screen and (max-width: 1160px) {
+  .services__content {
+    padding-bottom: 610px;
+    margin: 0;
+  }
+  .services__img {
+    position: absolute;
+    top: 1050px;
+    left: 110px;
+  }
+  .services__tags {
+    margin-top: 46px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .services__title {
+    margin-top: 43px;
+    margin-left: 39px;
+  }
+  .services__content-wrapper {
+    padding: 91px 135px 194px 35px;
+  }
+  .contact-btn {
+    margin-left: 35px;
+  }
+
+  .services__img {
+    top: 1170px;
+  }
+}
 
 @media screen and (max-width: 767px) {
+  .services__tags {
+    width: 140px;
+    margin-top: 39px;
+  }
+  .services__title {
+    font-size: 20px;
+    margin-left: 12px;
+  }
+  .services__content {
+    padding-bottom: 91px;
+  }
+  .services__content-wrapper {
+    display: block;
+    padding: 37px 0 194px 13px;
+  }
+  .services__achievements {
+    flex-direction: column;
+  }
+  .services__text-title {
+    font-size: 20px;
+    max-width: 325px;
+  }
   .btn-link {
     width: 100%;
     display: block;
@@ -142,6 +195,12 @@ export default {
   .contact-btn {
     padding: 14px 71px;
     line-height: 24px;
+    margin-left: 13px;
+  }
+  .services__img {
+    top: 516px;
+    left: auto;
+    right: 35px;
   }
 }
 
@@ -151,6 +210,9 @@ export default {
   }
 }
 @media screen and (max-width: 320px) {
+  .services__img {
+    right: 0;
+  }
   .contact-btn {
     padding: 14px 10px;
   }

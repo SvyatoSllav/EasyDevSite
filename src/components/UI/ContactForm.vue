@@ -89,7 +89,7 @@ export default {
   width: 200%;
   height: 200%;
   background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
+  z-index: 2;
 }
 .modal-form__wrapper {
   position: fixed;
@@ -99,7 +99,7 @@ export default {
   max-width: 720px;
   max-height: 900px;
   background-color: #de6df1;
-  z-index: 23;
+  z-index: 3;
   padding: 129px 83px 70px;
 }
 .modal-form__close-btn {
@@ -113,7 +113,7 @@ export default {
   font-family: "Unbounded";
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: var(--title-fz);
   line-height: 60px;
   text-align: center;
   color: #ffffff;
@@ -147,6 +147,19 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
+  .modal-form__wrapper {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .modal-form__close-btn {
+    right: 88px;
+    width: 24px;
+    height: 22px;
+  }
+  .contact__form-field {
+    max-width: 345px;
+    padding: 14px 0 14px 32px;
+  }
   .btn-link {
     width: 100%;
     display: block;

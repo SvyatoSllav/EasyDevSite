@@ -25,7 +25,7 @@ export default {
   font-family: "Unbounded";
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: var(--sub_title-fz);
   line-height: 33px;
   white-space: nowrap;
   display: inline-block;

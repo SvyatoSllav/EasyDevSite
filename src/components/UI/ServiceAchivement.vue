@@ -33,4 +33,20 @@ export default {
   color: #555555;
   max-width: 113px;
 }
+@media screen and (max-width: 1023px) {
+  .services__achievement {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .services__achievement {
+    margin-bottom: 25px;
+  }
+  .service__achivement-title {
+    font-size: 40px;
+  }
+  .service__achivement-subtitle {
+    font-size: 12px;
+  }
+}
 </style>

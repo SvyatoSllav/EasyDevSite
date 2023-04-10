@@ -141,7 +141,7 @@ export default {
     border-radius: 30px;
   }
   .service__info-wrapper {
-    padding: 60px 20px 0;
+    padding: 29px 18px 28px;
   }
   .service__item-text {
     line-height: 24px;

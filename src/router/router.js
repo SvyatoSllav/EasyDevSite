@@ -1,5 +1,6 @@
 import HomePage from "@/pages/HomePage";
 import TheServices from "@/pages/TheServices";
+import CaseInfo from "@/pages/CaseInfo";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
@@ -10,6 +11,10 @@ const routes = [
   {
     path: "/services",
     component: TheServices,
+  },
+  {
+    path: "/case",
+    component: CaseInfo,
   },
 ];
 

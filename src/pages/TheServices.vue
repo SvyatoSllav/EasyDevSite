@@ -1,7 +1,7 @@
 <template>
   <the-header @showForm="this.isVisible = true"></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
-  <services-info></services-info>
+  <services-info @showForm="this.isVisible = true"></services-info>
   <contact-modal-form
     @close="this.isVisible = false"
     :isVisible="isVisible"

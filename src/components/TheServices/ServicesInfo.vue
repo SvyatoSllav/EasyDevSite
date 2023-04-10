@@ -31,7 +31,9 @@
         </div>
         <img :src="servicesImg" alt="" class="services__img" />
       </div>
-      <contact-button class="service__btn"></contact-button>
+      <a class="btn-link" @click="showForm">
+        <button class="contact-btn"><slot>оставить заявку</slot></button>
+      </a>
     </div>
   </section>
 </template>
@@ -52,6 +54,12 @@ export default {
           ? require("@/assets/img/services_img_desktop.jpg")
           : require("@/assets/img/services_img_mobile.jpg"),
     };
+  },
+  methods: {
+    showForm() {
+      console.log(1);
+      this.$emit("showForm");
+    },
   },
 };
 </script>
@@ -101,6 +109,50 @@ export default {
   max-width: 622px;
 }
 .service__btn {
+}
+.contact-btn {
   margin-left: 110px;
+  cursor: pointer;
+  background-color: #de6df1;
+  padding: 25px 135px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--sub_title-fz);
+  line-height: 33px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  color: #de6df1;
+  border: 2px solid black;
+  background-color: v-bind(textColor);
+}
+
+@media screen and (max-width: 767px) {
+  .btn-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .contact-btn {
+    padding: 14px 71px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .contact-btn {
+    padding: 14px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact-btn {
+    padding: 14px 10px;
+  }
 }
 </style>

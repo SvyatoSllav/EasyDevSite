@@ -20,7 +20,7 @@ export default {
           : window.innerWidth > 475
           ? "95px"
           : "50px",
-      isVisible: true,
+      isVisible: false,
     };
   },
   components: {

@@ -1,8 +1,11 @@
 <template>
-  <the-header></the-header>
+  <the-header @showForm="this.isVisible = true"></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <services-info></services-info>
-  <contact-form></contact-form>
+  <contact-modal-form
+    @close="this.isVisible = false"
+    :isVisible="isVisible"
+  ></contact-modal-form>
 </template>
 
 <script>
@@ -17,6 +20,7 @@ export default {
           : window.innerWidth > 475
           ? "95px"
           : "50px",
+      isVisible: true,
     };
   },
   components: {

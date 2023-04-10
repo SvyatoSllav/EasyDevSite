@@ -17,10 +17,8 @@
             <h2 class="header__nav-item">Контакты</h2>
           </a>
         </div>
-        <button class="header__nav_contact-button">
-          <a href="#contact" class="header__nav_contact-text">
-            Оставить заявку
-          </a>
+        <button @click="showForm" class="header__nav_contact-button">
+          <p class="header__nav_contact-text">Оставить заявку</p>
         </button>
       </div>
     </div>
@@ -39,6 +37,12 @@ export default {
           : "mobile"
       }.svg`),
     };
+  },
+  methods: {
+    showForm() {
+      console.log(1);
+      this.$emit("showForm");
+    },
   },
 };
 </script>

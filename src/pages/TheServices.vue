@@ -2,15 +2,17 @@
   <the-header @showForm="this.isVisible = true"></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <services-info @showForm="this.isVisible = true"></services-info>
-  <contact-modal-form
-    @close="this.isVisible = false"
-    :isVisible="isVisible"
-  ></contact-modal-form>
+  <contact-modal-form @close="this.isVisible = false" :isVisible="isVisible">
+  </contact-modal-form>
+  <the-services></the-services>
+  <the-footer @showForm="this.isVisible = true"></the-footer>
 </template>
 
 <script>
 import TheHeader from "@/components/TheServices/TheHeader";
 import ServicesInfo from "@/components/TheServices/ServicesInfo";
+import TheFooter from "@/components/TheServices/TheFooter";
+import TheServices from "@/components/TheServices/TheServices";
 export default {
   data() {
     return {
@@ -26,6 +28,8 @@ export default {
   components: {
     TheHeader,
     ServicesInfo,
+    TheServices,
+    TheFooter,
   },
 };
 </script>

@@ -2,11 +2,14 @@
   <div class="pink-circle__wrapper">
     <div class="pink-circle"></div>
   </div>
+  <div class="blue-circle"></div>
   <the-header></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <case-intro></case-intro>
   <case-img></case-img>
   <case-info-slider></case-info-slider>
+  <case-text></case-text>
+  <the-footer></the-footer>
 </template>
 
 <script>
@@ -14,12 +17,16 @@ import TheHeader from "@/components/CaseInfo/TheHeader";
 import CaseIntro from "@/components/CaseInfo/CaseIntro";
 import CaseImg from "@/components/CaseInfo/CaseImg";
 import CaseInfoSlider from "@/components/CaseInfo/CaseInfoSlider";
+import CaseText from "@/components/CaseInfo/CaseText";
+import TheFooter from "@/components/CaseInfo/TheFooter";
 export default {
   components: {
     TheHeader,
     CaseIntro,
     CaseImg,
     CaseInfoSlider,
+    CaseText,
+    TheFooter,
   },
   data() {
     return {
@@ -52,5 +59,17 @@ export default {
   width: 576px;
   height: 576px;
   background: rgba(222, 109, 241, 0.7);
+}
+.blue-circle {
+  z-index: -1;
+  position: absolute;
+  top: 1900px;
+  left: 0;
+  transform: translateX(-270px);
+  width: 576px;
+  height: 576px;
+  background-color: #3587bf;
+  background: rgba(53, 135, 191, 0.3);
+  filter: blur(225px);
 }
 </style>

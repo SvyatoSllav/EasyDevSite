@@ -169,7 +169,8 @@ export default {
   .card__content {
     padding: 55px 42px;
   }
-  .card__text-title {
+  .card__text-title,
+  .card__text-subtitle {
     font-size: 20px;
     line-height: 23px;
   }

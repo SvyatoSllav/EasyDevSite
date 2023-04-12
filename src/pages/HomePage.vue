@@ -68,7 +68,6 @@ export default {
   transform: translateX(240px);
   width: 576px;
   height: 576px;
-  background-color: #3587bf;
   background: rgba(53, 135, 191, 1);
 }
 
@@ -79,7 +78,6 @@ export default {
   left: -120px;
   width: 576px;
   height: 576px;
-  background-color: #3587bf;
   background: rgba(222, 109, 241, 0.3);
   filter: blur(225px);
 }

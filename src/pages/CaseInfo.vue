@@ -6,17 +6,20 @@
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <case-intro></case-intro>
   <case-img></case-img>
+  <case-info-slider></case-info-slider>
 </template>
 
 <script>
 import TheHeader from "@/components/CaseInfo/TheHeader";
 import CaseIntro from "@/components/CaseInfo/CaseIntro";
 import CaseImg from "@/components/CaseInfo/CaseImg";
+import CaseInfoSlider from "@/components/CaseInfo/CaseInfoSlider";
 export default {
   components: {
     TheHeader,
     CaseIntro,
     CaseImg,
+    CaseInfoSlider,
   },
   data() {
     return {

@@ -1,8 +1,10 @@
 <template>
-  <gradient-tags class="case__tags">
-    <template v-slot:first_tag>наши работы</template
-    ><template v-slot:second_tag>/наши работы</template>
-  </gradient-tags>
+  <div class="tags-wrapper">
+    <gradient-tags class="case__tags">
+      <template v-slot:first_tag>наши работы</template
+      ><template v-slot:second_tag>/наши работы</template>
+    </gradient-tags>
+  </div>
   <section class="case-intro">
     <h5 class="case__title">{{ this.title }}</h5>
     <h6 class="case__subtitle">{{ this.subtitle }}</h6>
@@ -33,9 +35,13 @@ export default {
 </script>
 
 <style scoped>
+.tags-wrapper {
+  max-width: 1372px;
+  margin: 0 auto;
+}
 .case__tags {
   width: 300px;
-  margin: 90px 141px 50px auto;
+  margin: 90px 0px 50px auto;
 }
 .case-intro {
   background-color: #fff;

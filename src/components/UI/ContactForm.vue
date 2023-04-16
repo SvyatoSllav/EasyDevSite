@@ -15,28 +15,24 @@
             type="text"
             class="contact__form-field"
             placeholder="Имя"
-            required
           /><br />
           <input
             v-model="email"
             type="email"
             class="contact__form-field"
             placeholder="Email"
-            required
           /><br />
           <input
             v-model="phone"
             type="tel"
             class="contact__form-field"
             placeholder="Телефон"
-            required
           /><br />
           <input
             v-model="telegram"
             type="text"
             class="contact__form-field"
             placeholder="Telegram"
-            required
           /><br />
           <a class="btn-link" href="#contact">
             <button @click="sendFormData" class="contact-btn">
@@ -50,6 +46,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "contact-modal-form",
   props: {
@@ -67,12 +64,23 @@ export default {
     };
   },
   methods: {
-    sendFormData() {
-      console.log(this.name);
-      console.log(this.email);
-      console.log(this.phone);
+    async sendFormData() {
+      try {
+        const response = await axios.post(
+          process.env.API_URL + "/application/create/",
+          {
+            name: this.name,
+            messager_link: this.telegram,
+            email: this.email,
+            phone_number: this.phone,
+          }
+        );
+        this.closeForm();
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
       this.name = this.email = this.phone = this.telegram = "";
-      this.$emit("close");
     },
     closeForm() {
       this.$emit("close");

@@ -70,7 +70,7 @@ export default {
             name: this.name,
             messager_link: this.telegram,
             email: this.email,
-            phone: this.mail,
+            phone_number: this.phone,
           }
         );
         console.log(response.data);

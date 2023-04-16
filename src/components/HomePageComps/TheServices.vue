@@ -10,9 +10,10 @@
           <service-item
             v-for="item in serviceItems.slice(0, itemsAmount)"
             :key="item.id"
+            :id="item.id"
           >
-            <template v-slot:item-name>{{ item.name }}</template>
-            <template v-slot:item-text>{{ item.text }}</template>
+            <template v-slot:item-name>{{ item.title }}</template>
+            <template v-slot:item-text>{{ item.description }}</template>
           </service-item></transition-group
         >
       </div>
@@ -27,35 +28,28 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
-      serviceItems: [
-        {
-          id: 1,
-          name: "Разработка ПО",
-          text: "Квалифицированная команда разработчиков создаёт высококачественные программные продукты, соответствующие бизнес-целям наших клиентов.",
-        },
-        {
-          id: 2,
-          name: "Разработка ПО",
-          text: "Квалифицированная команда разработчиков создаёт высококачественные программные продукты, соответствующие бизнес-целям наших клиентов.",
-        },
-        {
-          id: 3,
-          name: "Разработка ПО",
-          text: "Квалифицированная команда разработчиков создаёт высококачественные программные продукты, соответствующие бизнес-целям наших клиентов.",
-        },
-        {
-          id: 4,
-          name: "Разработка ПО",
-          text: "Квалифицированная команда разработчиков создаёт высококачественные программные продукты, соответствующие бизнес-целям наших клиентов.",
-        },
-      ],
+      serviceItems: [],
       itemsAmount: 2,
     };
   },
+  methods: {
+    async fetchServices() {
+      try {
+        const response = await axios.get(
+          process.env.API_URL + "/portfolio/projects/"
+        );
+        this.serviceItems = response.data.data;
+      } catch (e) {
+        console.log(e);
+      }
+    },
+  },
   mounted() {
+    this.fetchServices();
     const scrollTo = this.$route.meta.scrollTo;
     if (scrollTo) {
       const el = document.querySelector(scrollTo);

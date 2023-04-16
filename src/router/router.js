@@ -9,8 +9,11 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/services",
+    path: "/services/:id",
     component: TheServices,
+    meta: {
+      scrollTo: "#header",
+    },
   },
   {
     path: "/case/:id",

@@ -1,7 +1,7 @@
 <template>
   <section class="reviews">
     <div class="reviews__wrapper">
-      <gradient-tags @click="fetchReviews" class="reviews__tags">
+      <gradient-tags class="reviews__tags">
         <template v-slot:first_tag>отзывы</template>
         <template v-slot:second_tag>/отзывы</template>
       </gradient-tags>
@@ -18,11 +18,11 @@
         >
           <swiperSlide :key="post.id" v-for="post in posts">
             <review-card>
-              <template v-slot:review-text>{{ post.reviewText }}</template>
+              <template v-slot:review-text>{{ post.review }}</template>
               <template v-slot:author-img
-                ><img :src="post.authorImg" alt=""
+                ><img :src="post.persons_image" alt=""
               /></template>
-              <template v-slot:author-name>{{ post.authorName }}</template>
+              <template v-slot:author-name>{{ post.full_name }}</template>
               <template v-slot:author-company>{{
                 post.authorCompany
               }}</template>
@@ -49,7 +49,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-// import axios from "axios";
+import axios from "axios";
 export default {
   components: {
     Swiper,
@@ -66,36 +66,7 @@ export default {
       }.png`),
       reviewAmount:
         window.innerWidth > 1025 ? 3 : window.innerWidth > 450 ? 2 : 1,
-      posts: [
-        {
-          id: 1,
-          reviewText: "somte-text",
-          authorImg: require("@/assets/img/review_author1.png"),
-          authorName: "author__name",
-          authorCompany: "asmamda",
-        },
-        {
-          id: 2,
-          reviewText: "somte-text",
-          authorImg: require("@/assets/img/review_author1.png"),
-          authorName: "author__name",
-          authorCompany: "asmamda",
-        },
-        {
-          id: 3,
-          reviewText: "somte-text",
-          authorImg: require("@/assets/img/review_author1.png"),
-          authorName: "author__name",
-          authorCompany: "asmamda",
-        },
-        {
-          id: 4,
-          reviewText: "somte-text",
-          authorImg: require("@/assets/img/review_author1.png"),
-          authorName: "author__name",
-          authorCompany: "asmamda",
-        },
-      ],
+      posts: [],
     };
   },
   setup() {
@@ -107,25 +78,29 @@ export default {
       next,
     };
   },
-  //   methods: {
-  //     async fetchReviews() {
-  //       const data = {
-  //         "X-CSRFToken":
-  //           "uj40xdIpZBziNdS9jhKZTtpg10w62k5UBAkomfFeGpHBV9xsWBkoB5saXq8Zsv1I",
-  //       };
-  //       try {
-  //         const response = await axios.get(
-  //           "http://127.0.0.1/api/v1/portfolio/reviews_list/",
-  //           {
-  //             headers: data,
-  //           }
-  //         );
-  //         console.log(response);
-  //       } catch (e) {
-  //         // console.log(e);
-  //       }
-  //     },
-  //   },
+  methods: {
+    async fetchReviews() {
+      const data = {
+        "X-CSRFToken":
+          "F9nbFvaec9OhEHS0H1bNV1S452SYY9BAMqDzux73TXWAMDxjklLcDDVY1suRokxo",
+      };
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1/api/v1/portfolio/reviews_list/",
+          {
+            headers: data,
+          }
+        );
+        this.posts = response.data;
+        console.log(this.posts);
+      } catch (e) {
+        console.log(e);
+      }
+    },
+  },
+  mounted() {
+    this.fetchReviews();
+  },
 };
 </script>
 

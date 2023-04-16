@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -61,10 +62,21 @@ export default {
     };
   },
   methods: {
-    sendFormData() {
-      console.log(this.name);
-      console.log(this.email);
-      console.log(this.phone);
+    async sendFormData() {
+      try {
+        const response = await axios.post(
+          process.env.API_URL + "/application/create/",
+          {
+            name: this.name,
+            messager_link: this.telegram,
+            email: this.email,
+            phone: this.mail,
+          }
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
       this.name = this.email = this.phone = this.telegram = "";
     },
   },

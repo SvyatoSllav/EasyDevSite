@@ -50,6 +50,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import axios from "axios";
+// import.meta.env.API_URL;
 export default {
   components: {
     Swiper,
@@ -80,16 +81,9 @@ export default {
   },
   methods: {
     async fetchReviews() {
-      const data = {
-        "X-CSRFToken":
-          "F9nbFvaec9OhEHS0H1bNV1S452SYY9BAMqDzux73TXWAMDxjklLcDDVY1suRokxo",
-      };
       try {
         const response = await axios.get(
-          "http://127.0.0.1/api/v1/portfolio/reviews_list/",
-          {
-            headers: data,
-          }
+          process.env.API_URL + "/portfolio/reviews_list/"
         );
         this.posts = response.data;
         console.log(this.posts);

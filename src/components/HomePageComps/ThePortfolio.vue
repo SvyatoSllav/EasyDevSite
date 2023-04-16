@@ -25,34 +25,35 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       portfolioItems: [
-        {
-          id: 1,
-          img: require("@/assets/img/case1.png"),
-          name: "BoostBuffet",
-          link: "https://github.com/EasyDevCompany/BoostBuffet",
-        },
-        {
-          id: 2,
-          img: require("@/assets/img/case1.png"),
-          name: "BoostBuffet",
-          link: "https://github.com/EasyDevCompany/BoostBuffet",
-        },
-        {
-          id: 3,
-          img: require("@/assets/img/case1.png"),
-          name: "BoostBuffet",
-          link: "https://github.com/EasyDevCompany/BoostBuffet",
-        },
-        {
-          id: 4,
-          img: require("@/assets/img/case1.png"),
-          name: "BoostBuffet",
-          link: "https://github.com/EasyDevCompany/BoostBuffet",
-        },
+        // {
+        //   id: 1,
+        //   img: require("@/assets/img/case1.png"),
+        //   name: "BoostBuffet",
+        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
+        // },
+        // {
+        //   id: 2,
+        //   img: require("@/assets/img/case1.png"),
+        //   name: "BoostBuffet",
+        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
+        // },
+        // {
+        //   id: 3,
+        //   img: require("@/assets/img/case1.png"),
+        //   name: "BoostBuffet",
+        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
+        // },
+        // {
+        //   id: 4,
+        //   img: require("@/assets/img/case1.png"),
+        //   name: "BoostBuffet",
+        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
+        // },
       ],
       itemsAmount: 2,
     };
@@ -62,7 +63,20 @@ export default {
       return "background-image: " + "url();";
     },
   },
+  methods: {
+    async fetchProjects() {
+      try {
+        const response = await axios.get(
+          process.env.API_URL + "/portfolio/projects/"
+        );
+        this.portfolioItems = response.data.data;
+      } catch (e) {
+        console.log(e);
+      }
+    },
+  },
   mounted() {
+    this.fetchProjects();
     const scrollTo = this.$route.meta.scrollTo;
     if (scrollTo) {
       const el = document.querySelector(scrollTo);

@@ -86,7 +86,6 @@ export default {
           process.env.API_URL + "/portfolio/reviews_list/"
         );
         this.posts = response.data;
-        console.log(this.posts);
       } catch (e) {
         console.log(e);
       }

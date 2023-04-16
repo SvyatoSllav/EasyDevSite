@@ -29,32 +29,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      portfolioItems: [
-        // {
-        //   id: 1,
-        //   img: require("@/assets/img/case1.png"),
-        //   name: "BoostBuffet",
-        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
-        // },
-        // {
-        //   id: 2,
-        //   img: require("@/assets/img/case1.png"),
-        //   name: "BoostBuffet",
-        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
-        // },
-        // {
-        //   id: 3,
-        //   img: require("@/assets/img/case1.png"),
-        //   name: "BoostBuffet",
-        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
-        // },
-        // {
-        //   id: 4,
-        //   img: require("@/assets/img/case1.png"),
-        //   name: "BoostBuffet",
-        //   link: "https://github.com/EasyDevCompany/BoostBuffet",
-        // },
-      ],
+      portfolioItems: [],
       itemsAmount: 2,
     };
   },

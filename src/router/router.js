@@ -13,8 +13,11 @@ const routes = [
     component: TheServices,
   },
   {
-    path: "/case",
+    path: "/case/:id",
     component: CaseInfo,
+    meta: {
+      scrollTo: "#header",
+    },
   },
   {
     path: "/about",

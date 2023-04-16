@@ -1,19 +1,21 @@
 <template>
-  <div
-    :style="{ 'background-image': `url(${item.project[0].image})` }"
-    class="portfolio__item"
-  >
-    <a class="porftolio__item-btn" href="#">
-      <span class="porftolio__item-name">{{ item.title }}</span
-      ><br />
-      <span class="portfolio__item-link">{{ item.description }}</span>
-      <img
-        class="portfolio__item-arrow"
-        src="@/assets/img/portfolio_arrow_link.svg"
-        alt=""
-      />
-    </a>
-  </div>
+  <router-link :to="{ path: '/case/' + item.id }">
+    <div
+      :style="{ 'background-image': `url(${item.project[0].image})` }"
+      class="portfolio__item"
+    >
+      <a class="porftolio__item-btn" href="#">
+        <span class="porftolio__item-name">{{ item.title }}</span
+        ><br />
+        <span class="portfolio__item-link">{{ item.description }}</span>
+        <img
+          class="portfolio__item-arrow"
+          src="@/assets/img/portfolio_arrow_link.svg"
+          alt=""
+        />
+      </a>
+    </div>
+  </router-link>
 </template>
 
 <script>

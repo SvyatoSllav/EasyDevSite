@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__nav-wrapper">
         <a href="#"><img :src="logoImg" alt="" class="logo" /></a>
@@ -42,6 +42,20 @@ export default {
     showForm() {
       this.$emit("showForm");
     },
+  },
+  mounted() {
+    const scrollTo = this.$route.meta.scrollTo;
+    if (scrollTo) {
+      const el = document.querySelector(scrollTo);
+      if (el) {
+        const options = {
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        };
+        el.scrollIntoView(options);
+      }
+    }
   },
 };
 </script>

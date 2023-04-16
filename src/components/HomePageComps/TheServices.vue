@@ -1,11 +1,11 @@
 <template>
-  <section class="services">
+  <section class="services" id="services">
     <div class="services__wrapper">
       <gradient-tags class="service__tags">
         <template v-slot:first_tag>услуги</template>
         <template v-slot:second_tag>/услуги</template>
       </gradient-tags>
-      <div class="services__items" id="services">
+      <div class="services__items">
         <transition-group name="slide-fade">
           <service-item
             v-for="item in serviceItems.slice(0, itemsAmount)"
@@ -22,6 +22,7 @@
         </contact-button>
       </div>
     </div>
+    <div id="home-services"></div>
   </section>
 </template>
 

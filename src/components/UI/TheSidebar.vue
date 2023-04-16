@@ -13,27 +13,37 @@
           @click="this.showSidebar = false"
         />
         <div class="sidebar__nav">
-          <router-link to="/about">
+          <router-link
+            @click="this.showSidebar = false"
+            v-scroll-to="'#about'"
+            to="/about"
+          >
             <p class="sidebar__nav-item">О нас</p>
             <br />
           </router-link>
           <router-link
             @click="this.showSidebar = false"
             to="/portfolio"
+            v-scroll-to="'#portfolio'"
             class="sidebar__nav-item"
           >
             Наши работы
           </router-link>
           <br />
-          <router-link @click="this.showSidebar = false" to="/home-services">
+          <router-link
+            @click="this.showSidebar = false"
+            to="/home-services"
+            v-scroll-to="'#services'"
+          >
             <p class="sidebar__nav-item">Услуги</p>
             <br />
           </router-link>
-          <router-link
-            to="/footer"
+          <a
+            href="#"
+            v-scroll-to="'#footer'"
             @click="this.showSidebar = false"
             class="sidebar__nav-item"
-            >Контакты</router-link
+            >Контакты</a
           ><br />
         </div>
         <div class="sidebar__contacts">
@@ -51,6 +61,7 @@
         </div>
         <router-link
           to="/form"
+          v-scroll-to="'#contact'"
           class="btn-link"
           @click="this.showSidebar = false"
         >

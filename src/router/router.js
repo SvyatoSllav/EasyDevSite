@@ -34,14 +34,14 @@ const routes = [
     path: "/home-services",
     component: HomePage,
     meta: {
-      scrollTo: "#services",
+      scrollTo: "#home-services",
     },
   },
   {
     path: "/form",
     component: HomePage,
     meta: {
-      scrollTo: "#form",
+      scrollTo: "#contact",
     },
   },
   {

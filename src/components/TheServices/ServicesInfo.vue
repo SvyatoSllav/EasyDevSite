@@ -1,5 +1,5 @@
 <template>
-  <section class="services-info">
+  <section id="services" class="services-info">
     <gradient-tags class="services__tags">
       <template v-slot:first_tag>услуги</template
       ><template v-slot:second_tag>/услуги</template>

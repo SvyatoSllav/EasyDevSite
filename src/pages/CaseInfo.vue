@@ -3,13 +3,15 @@
     <div class="pink-circle"></div>
   </div>
   <div class="blue-circle"></div>
-  <the-header></the-header>
+  <the-header @showForm="this.isVisible = true"></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
   <case-intro></case-intro>
   <case-img></case-img>
   <case-info-slider></case-info-slider>
   <case-text></case-text>
-  <the-footer></the-footer>
+  <the-footer @showForm="this.isVisible = true"></the-footer>
+  <contact-modal-form @close="this.isVisible = false" :isVisible="isVisible">
+  </contact-modal-form>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tags-wrapper">
+  <div id="portfolio" class="tags-wrapper">
     <gradient-tags class="case__tags">
       <template v-slot:first_tag>наши работы</template
       ><template v-slot:second_tag>/наши работы</template>

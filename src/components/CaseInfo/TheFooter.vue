@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__wrapper">
       <gradient-tags class="footer__tags">
         <template v-slot:first_tag>контакты</template>
@@ -47,7 +47,6 @@
 export default {
   methods: {
     showForm() {
-      console.log(1);
       this.$emit("showForm");
     },
   },
@@ -56,6 +55,7 @@ export default {
 
 <style scoped>
 .footer {
+  margin-top: 130px;
   background-color: #fff;
 }
 
@@ -149,6 +149,9 @@ export default {
 }
 
 @media screen and (max-width: 1160px) {
+  .footer {
+    margin-top: 180px;
+  }
   .footer__wrapper {
     padding: 30px 36px;
   }
@@ -199,6 +202,9 @@ export default {
 }
 
 @media screen and (max-width: 424px) {
+  .footer {
+    margin-top: 55px;
+  }
   .contact-btn {
     padding: 14px 40px;
   }

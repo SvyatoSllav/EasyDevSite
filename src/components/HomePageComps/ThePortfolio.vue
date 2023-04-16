@@ -1,11 +1,11 @@
 <template>
-  <section class="portfolio" id="portfolio">
+  <section class="portfolio">
     <div class="porfolio__wrapper">
       <gradient-tags class="portfolio__tags">
         <template v-slot:first_tag>наши работы</template>
         <template v-slot:second_tag>/наши работы</template>
       </gradient-tags>
-      <div class="porftolio__items">
+      <div class="porftolio__items" id="portfolio">
         <transition-group name="slide-fade">
           <portfolio-item
             :item="item"
@@ -61,6 +61,20 @@ export default {
     style() {
       return "background-image: " + "url();";
     },
+  },
+  mounted() {
+    const scrollTo = this.$route.meta.scrollTo;
+    if (scrollTo) {
+      const el = document.querySelector(scrollTo);
+      if (el) {
+        const options = {
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        };
+        el.scrollIntoView(options);
+      }
+    }
   },
 };
 </script>

@@ -13,16 +13,28 @@
           @click="this.showSidebar = false"
         />
         <div class="sidebar__nav">
-          <router-link to="/">
+          <router-link to="/about">
             <p class="sidebar__nav-item">О нас</p>
             <br />
           </router-link>
-          <a class="sidebar__nav-item">Наши работы</a><br />
-          <router-link to="/services">
+          <router-link
+            @click="this.showSidebar = false"
+            to="/portfolio"
+            class="sidebar__nav-item"
+          >
+            Наши работы
+          </router-link>
+          <br />
+          <router-link @click="this.showSidebar = false" to="/home-services">
             <p class="sidebar__nav-item">Услуги</p>
             <br />
           </router-link>
-          <a class="sidebar__nav-item">Контакты</a><br />
+          <router-link
+            to="/footer"
+            @click="this.showSidebar = false"
+            class="sidebar__nav-item"
+            >Контакты</router-link
+          ><br />
         </div>
         <div class="sidebar__contacts">
           <div class="sidebar__phone sidebar__contact-item">
@@ -37,9 +49,13 @@
             <a href="https://t.me/EasyDevVi">TG Виталий</a>
           </div>
         </div>
-        <a class="btn-link" @click="this.showSidebar = false" href="#contact">
+        <router-link
+          to="/form"
+          class="btn-link"
+          @click="this.showSidebar = false"
+        >
           <button class="contact-btn"><slot>оставить заявку</slot></button>
-        </a>
+        </router-link>
       </sidebar>
     </div>
   </transition>

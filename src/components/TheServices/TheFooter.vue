@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__wrapper">
       <gradient-tags class="footer__tags">
         <template v-slot:first_tag>контакты</template>

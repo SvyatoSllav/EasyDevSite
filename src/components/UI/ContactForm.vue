@@ -1,5 +1,5 @@
 <template>
-  <transition name="slide-fade">
+  <transition name="fade">
     <div class="modal-form" v-show="isVisible">
       <div class="modal-form__wrapper">
         <img
@@ -146,6 +146,16 @@ export default {
   background-color: #fff;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 @media screen and (max-width: 767px) {
   .modal-form__wrapper {
     padding-top: 100px;
@@ -171,18 +181,6 @@ export default {
     line-height: 24px;
   }
 }
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  opacity: 0;
-}
 
 @media screen and (max-width: 424px) {
   .contact-btn {
@@ -192,6 +190,9 @@ export default {
 @media screen and (max-width: 320px) {
   .contact-btn {
     padding: 14px 10px;
+  }
+  .contact__form-field {
+    max-width: 310px;
   }
 }
 </style>

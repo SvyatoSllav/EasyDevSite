@@ -10,12 +10,7 @@
           <a href="#" v-scroll-to="'#portfolio'" class="header__nav-link">
             <h2 class="header__nav-item">Наши работы</h2>
           </a>
-          <a
-            href="#"
-            v-scroll-to="'#services'"
-            class="header__nav-link"
-            to="/services"
-          >
+          <a href="#" v-scroll-to="'#services'" class="header__nav-link">
             <h2 class="header__nav-item">Услуги</h2>
           </a>
           <a href="#" v-scroll-to="'#footer'" class="header__nav-link">

@@ -1,11 +1,11 @@
 <template>
-  <section id="services" class="services">
+  <section class="services">
     <div class="services__wrapper">
       <gradient-tags class="service__tags">
         <template v-slot:first_tag>услуги</template>
         <template v-slot:second_tag>/услуги</template>
       </gradient-tags>
-      <div class="services__items">
+      <div class="services__items" id="services">
         <transition-group name="slide-fade">
           <service-item
             v-for="item in serviceItems.slice(0, itemsAmount)"
@@ -53,6 +53,21 @@ export default {
       ],
       itemsAmount: 2,
     };
+  },
+  mounted() {
+    const scrollTo = this.$route.meta.scrollTo;
+    if (scrollTo) {
+      const el = document.querySelector(scrollTo);
+      if (el) {
+        const visibleHeight = el.clientHeight;
+        const scrollHeight = el.scrollHeight;
+        const hiddenHeight = scrollHeight - visibleHeight;
+        el.scrollTo({
+          top: hiddenHeight > 0 ? hiddenHeight + 1500 : scrollHeight + 1500,
+          behavior: "smooth",
+        });
+      }
+    }
   },
 };
 </script>

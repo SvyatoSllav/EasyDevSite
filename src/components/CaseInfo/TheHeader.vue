@@ -4,16 +4,16 @@
       <div class="header__nav-wrapper">
         <a href="#"><img :src="logoImg" alt="" class="logo" /></a>
         <div class="header__nav-items">
-          <a href="#about" class="header__nav-link">
+          <router-link to="/about" class="header__nav-link">
             <h2 class="header__nav-item">О нас</h2>
-          </a>
-          <a href="#portfolio" class="header__nav-link">
+          </router-link>
+          <a href="#" v-scroll-to="'#portfolio'" class="header__nav-link">
             <h2 class="header__nav-item">Наши работы</h2>
           </a>
-          <a href="#" class="header__nav-link">
+          <router-link to="/home-services" class="header__nav-link">
             <h2 class="header__nav-item">Услуги</h2>
-          </a>
-          <a href="#footer" class="header__nav-link">
+          </router-link>
+          <a href="#" v-scroll-to="'#footer'" class="header__nav-link">
             <h2 class="header__nav-item">Контакты</h2>
           </a>
         </div>
@@ -40,7 +40,6 @@ export default {
   },
   methods: {
     showForm() {
-      console.log(1);
       this.$emit("showForm");
     },
   },

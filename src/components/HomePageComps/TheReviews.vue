@@ -1,7 +1,7 @@
 <template>
   <section class="reviews">
     <div class="reviews__wrapper">
-      <gradient-tags class="reviews__tags">
+      <gradient-tags @click="fetchReviews" class="reviews__tags">
         <template v-slot:first_tag>отзывы</template>
         <template v-slot:second_tag>/отзывы</template>
       </gradient-tags>
@@ -49,6 +49,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+// import axios from "axios";
 export default {
   components: {
     Swiper,
@@ -106,6 +107,25 @@ export default {
       next,
     };
   },
+  //   methods: {
+  //     async fetchReviews() {
+  //       const data = {
+  //         "X-CSRFToken":
+  //           "uj40xdIpZBziNdS9jhKZTtpg10w62k5UBAkomfFeGpHBV9xsWBkoB5saXq8Zsv1I",
+  //       };
+  //       try {
+  //         const response = await axios.get(
+  //           "http://127.0.0.1/api/v1/portfolio/reviews_list/",
+  //           {
+  //             headers: data,
+  //           }
+  //         );
+  //         console.log(response);
+  //       } catch (e) {
+  //         // console.log(e);
+  //       }
+  //     },
+  //   },
 };
 </script>
 

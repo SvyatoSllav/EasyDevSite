@@ -1,5 +1,5 @@
 <template>
-  <a class="btn-link" href="#contact">
+  <a class="btn-link">
     <button class="contact-btn"><slot>оставить заявку</slot></button>
   </a>
 </template>

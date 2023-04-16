@@ -1,18 +1,25 @@
 <template>
-  <section class="services">
+  <section id="services" class="services">
     <div class="services__wrapper">
       <gradient-tags class="service__tags">
         <template v-slot:first_tag>услуги</template>
         <template v-slot:second_tag>/услуги</template>
       </gradient-tags>
       <div class="services__items">
-        <service-item v-for="item in items" :key="item.id">
-          <template v-slot:item-name>{{ item.name }}</template>
-          <template v-slot:item-text>{{ item.text }}</template>
-        </service-item>
+        <transition-group name="slide-fade">
+          <service-item
+            v-for="item in serviceItems.slice(0, itemsAmount)"
+            :key="item.id"
+          >
+            <template v-slot:item-name>{{ item.name }}</template>
+            <template v-slot:item-text>{{ item.text }}</template>
+          </service-item></transition-group
+        >
       </div>
       <div class="services__contact-link">
-        <contact-button class="contact__link">Смотреть ещё</contact-button>
+        <contact-button @click="this.itemsAmount++" class="contact__link">
+          Смотреть ещё
+        </contact-button>
       </div>
     </div>
   </section>
@@ -22,7 +29,7 @@
 export default {
   data() {
     return {
-      items: [
+      serviceItems: [
         {
           id: 1,
           name: "Разработка ПО",
@@ -44,6 +51,7 @@ export default {
           text: "Квалифицированная команда разработчиков создаёт высококачественные программные продукты, соответствующие бизнес-целям наших клиентов.",
         },
       ],
+      itemsAmount: 2,
     };
   },
 };
@@ -70,7 +78,6 @@ export default {
   margin: 50px auto 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   column-gap: 40px;
   row-gap: 50px;
 }
@@ -78,6 +85,20 @@ export default {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 78px;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 
 @media screen and (max-width: 1160px) {

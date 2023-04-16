@@ -6,15 +6,19 @@
         <template v-slot:second_tag>/наши работы</template>
       </gradient-tags>
       <div class="porftolio__items">
-        <portfolio-item
-          :item="item"
-          v-for="item in portfolioItems.slice(0, itemsAmount)"
-          :key="item.id"
-        >
-        </portfolio-item>
+        <transition-group name="slide-fade">
+          <portfolio-item
+            :item="item"
+            v-for="item in portfolioItems.slice(0, itemsAmount)"
+            :key="item.id"
+          >
+          </portfolio-item
+        ></transition-group>
       </div>
       <div class="portfolio__contact-link">
-        <contact-button class="contact__link">Смотреть ещё</contact-button>
+        <contact-button @click="this.itemsAmount++" class="contact__link">
+          Смотреть ещё
+        </contact-button>
       </div>
     </div>
   </section>
@@ -50,8 +54,7 @@ export default {
           link: "https://github.com/EasyDevCompany/BoostBuffet",
         },
       ],
-      itemsAmount:
-        window.innerWidth > 1160 ? 4 : window.innerWidth > 767 ? 2 : 3,
+      itemsAmount: 2,
     };
   },
   computed: {
@@ -81,7 +84,6 @@ export default {
   margin: -18px auto 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   column-gap: 40px;
 }
 
@@ -92,6 +94,20 @@ export default {
 
 .contact__link {
   margin-top: 70px;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 
 @media screen and (max-width: 1160px) {

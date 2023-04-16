@@ -4,21 +4,26 @@
       <div class="header__nav-wrapper">
         <a href="#"><img :src="logoImg" alt="" class="logo" /></a>
         <div class="header__nav-items">
-          <a href="#about" class="header__nav-link">
+          <a href="#" v-scroll-to="'#about'" class="header__nav-link">
             <h2 class="header__nav-item">О нас</h2>
           </a>
-          <a href="#portfolio" class="header__nav-link">
+          <a href="#" v-scroll-to="'#portfolio'" class="header__nav-link">
             <h2 class="header__nav-item">Наши работы</h2>
           </a>
-          <router-link class="header__nav-link" to="/services"
-            ><h2 class="header__nav-item">Услуги</h2></router-link
+          <a
+            href="#"
+            v-scroll-to="'#services'"
+            class="header__nav-link"
+            to="/services"
           >
-          <a href="#footer" class="header__nav-link">
+            <h2 class="header__nav-item">Услуги</h2>
+          </a>
+          <a href="#" v-scroll-to="'#footer'" class="header__nav-link">
             <h2 class="header__nav-item">Контакты</h2>
           </a>
         </div>
         <button class="header__nav_contact-button">
-          <a href="#contact" class="header__nav_contact-text">
+          <a href="#" v-scroll-to="'#contact'" class="header__nav_contact-text">
             Оставить заявку
           </a>
         </button>
@@ -91,6 +96,14 @@ export default {
           : "mobile"
       }.svg`),
     };
+  },
+  methods: {
+    anchorScroll(elId) {
+      const el = this.$refs[elId];
+      console.log(el);
+      el.scrollIntoView({ behavior: "smooth" });
+      //   document.getElementById(elId).scrollIntoView();
+    },
   },
 };
 </script>

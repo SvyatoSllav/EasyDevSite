@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__wrapper">
       <gradient-tags class="footer__tags">
         <template v-slot:first_tag>контакты</template>
@@ -8,7 +8,7 @@
       <h1 class="footer__title">
         Хотите начать разработку сайта — просто отправьте заявку
       </h1>
-      <contact-button></contact-button>
+      <contact-button v-scroll-to="'#contact'"></contact-button>
       <div class="footer__contacts-wrapper">
         <div class="footer__contacts">
           <h3 class="footer__phone-contact">

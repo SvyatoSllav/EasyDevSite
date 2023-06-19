@@ -6,8 +6,8 @@
     </gradient-tags>
   </div>
   <section class="case-intro">
-    <h5 class="case__title">{{ this.title }}</h5>
-    <h6 class="case__subtitle">{{ this.subtitle }}</h6>
+    <h5 class="case__title">{{ caseInfo.title }}</h5>
+    <h6 class="case__subtitle">{{ caseInfo.description }}</h6>
     <p class="case__case-info">Особенности проекта</p>
     <ul class="case__info-list">
       <li v-for="el in this.infoItems" class="case__info-text" :key="el">
@@ -22,14 +22,18 @@
 export default {
   data() {
     return {
-      title: "Ubibat",
-      subtitle: "Site for powerbank sharing service",
       infoItems: [
         "Адаптивная верстка с анимацией и эффектом Parallax",
         "Получение актуальной информации о проходящих акциях в рамках «Программы 3+»",
         "Актуальный список дилеров, с возможностью просмотра их местоположения на карте на мобильных устройствах",
       ],
     };
+  },
+  props: {
+    caseInfo: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>
@@ -84,6 +88,7 @@ export default {
 .case__info-text {
   line-height: 42px;
   margin-left: 40px;
+  margin-bottom: 20px;
 }
 .case__img {
   position: relative;

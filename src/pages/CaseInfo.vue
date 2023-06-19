@@ -5,10 +5,10 @@
   <div class="blue-circle"></div>
   <the-header @showForm="this.isVisible = true"></the-header>
   <the-sidebar :burgerTop="burgerTop"></the-sidebar>
-  <case-intro></case-intro>
-  <case-img></case-img>
-  <case-info-slider></case-info-slider>
-  <case-text></case-text>
+  <case-intro v-bind:caseInfo="portfolioItem"></case-intro>
+  <case-img v-bind:caseInfo="portfolioItem"></case-img>
+  <case-info-slider v-bind:caseInfo="portfolioItem"></case-info-slider>
+  <case-text v-bind:caseInfo="portfolioItem"></case-text>
   <the-footer @showForm="this.isVisible = true"></the-footer>
   <contact-modal-form @close="this.isVisible = false" :isVisible="isVisible">
   </contact-modal-form>
@@ -21,6 +21,8 @@ import CaseImg from "@/components/CaseInfo/CaseImg";
 import CaseInfoSlider from "@/components/CaseInfo/CaseInfoSlider";
 import CaseText from "@/components/CaseInfo/CaseText";
 import TheFooter from "@/components/CaseInfo/TheFooter";
+import { useRoute } from "vue-router";
+import axios from "axios";
 export default {
   components: {
     TheHeader,
@@ -32,13 +34,36 @@ export default {
   },
   data() {
     return {
-      burgerTop:
-        window.innerWidth > 1160
-          ? 0
-          : window.innerWidth > 476
-          ? "30px"
-          : "20px",
+      isVisible: false,
+      portfolioItem: {},
     };
+  },
+  computed: {
+    burgerTop() {
+      if (window.innerWidth > 1160) {
+        return "0";
+      } else if (window.innerWidth > 476) {
+        return "30px";
+      }
+      return "20px";
+    },
+  },
+  methods: {
+    async fetchProject() {
+      try {
+        const route = useRoute();
+        let caseId = route.path.split("/")[2];
+        const response = await axios.get(
+          process.env.API_URL + "/portfolio/projects/" + caseId + "/"
+        );
+        this.portfolioItem = response.data.data;
+      } catch (e) {
+        console.log(e);
+      }
+    },
+  },
+  mounted() {
+    this.fetchProject();
   },
 };
 </script>

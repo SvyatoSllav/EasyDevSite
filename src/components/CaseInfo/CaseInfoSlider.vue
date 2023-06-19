@@ -1,84 +1,38 @@
 <template>
   <div class="case__info">
-    <swiper
-      :pagination="pagination"
-      :modules="modules"
-      class="mySwiper"
-      :slides-per-view="1"
-      :space-between="40"
-    >
-      <div class="pagination__wrapper"><div class="paginate"></div></div>
-      <swiperSlide>
-        <div class="card">
-          <div class="card__header"></div>
-          <div class="card__content">
-            <div class="card__text">
-              <p class="card__text-title">Продолжительность</p>
-              <p class="card__text-subtitle">10, 5 месяцев</p>
-            </div>
-            <div class="card__text">
-              <p class="card__text-title">Команда</p>
-              <p class="card__text-subtitle">
-                4 разработчика Project manager QI engineer
-              </p>
-            </div>
-            <div class="card__text">
-              <p class="card__text-title">Категория</p>
-              <p class="card__text-subtitle">Ux|Ui design</p>
-            </div>
-          </div>
+    <div class="pagination__wrapper"><div class="paginate"></div></div>
+    <div class="card">
+      <div class="card__header">
+        <div class="bullet-active bullet"></div>
+        <div class="bullet"></div>
+      </div>
+      <div class="card__content">
+        <div class="card__text">
+          <p class="card__text-title">Продолжительность</p>
+          <p class="card__text-subtitle">{{ caseInfo.project_duration }}</p>
         </div>
-      </swiperSlide>
-      <swiperSlide>
-        <div class="card">
-          <div class="card__header"></div>
-          <div class="card__content">
-            <div class="card__text">
-              <p class="card__text-title">Продолжительность</p>
-              <p class="card__text-subtitle">10, 5 месяцев</p>
-            </div>
-            <div class="card__text">
-              <p class="card__text-title">Команда</p>
-              <p class="card__text-subtitle">
-                4 разработчика Project manager QI engineer
-              </p>
-            </div>
-            <div class="card__text">
-              <p class="card__text-title">Категория</p>
-              <p class="card__text-subtitle">Ux|Ui design</p>
-            </div>
-          </div>
+        <div class="card__text">
+          <p class="card__text-title">Команда</p>
+          <p class="card__text-subtitle">
+            {{ caseInfo.project_team }}
+          </p>
         </div>
-      </swiperSlide>
-    </swiper>
+        <div class="card__text">
+          <p class="card__text-title">Категория</p>
+          <p class="card__text-subtitle">{{ caseInfo.project_category }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-import "swiper/css";
-
-import { Pagination } from "swiper";
-
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      pagination: {
-        el: ".paginate",
-        clickable: true,
-        bulletClass: "bullet",
-        bulletActiveClass: "bullet-active",
-        renderBullet: function (index, className) {
-          return '<div class="' + className + '">' + "</div>";
-        },
-      },
-      modules: [Pagination],
-    };
+  props: {
+    caseInfo: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>
@@ -104,6 +58,7 @@ export default {
   max-width: 1372px;
   width: 100%;
   height: 85px;
+  padding-top: 30px;
   background-color: #e0f3ff;
 }
 .pagination__wrapper {
@@ -124,12 +79,6 @@ export default {
 }
 .bullet-active {
   background: #de6df1;
-}
-.paginate {
-  max-width: 1372px;
-  padding-top: 31px;
-  margin: 0 auto;
-  height: 100%;
 }
 .card__content {
   padding-top: 46px;
@@ -158,6 +107,7 @@ export default {
   line-height: 34px;
   color: #555555;
   max-width: 222px;
+  white-space: nowrap;
 }
 .swiper-pagination-bullet {
   margin-top: 20px;
@@ -173,6 +123,12 @@ export default {
   .card__text-subtitle {
     font-size: 20px;
     line-height: 23px;
+  }
+  .paginate {
+    padding-top: 23px;
+  }
+  .card__header {
+    height: 65px;
   }
 }
 

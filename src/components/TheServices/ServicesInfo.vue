@@ -153,7 +153,7 @@ export default {
   }
 
   .services__img {
-    top: 900px;
+    top: 1020px;
   }
 }
 
@@ -199,6 +199,12 @@ export default {
 }
 
 @media screen and (max-width: 424px) {
+  .services__content {
+    padding-bottom: 20px;
+  }
+  .services__content-wrapper {
+    padding-bottom: 20px;
+  }
   .contact-btn {
     padding: 14px 40px;
   }

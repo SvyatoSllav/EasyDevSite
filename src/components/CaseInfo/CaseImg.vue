@@ -10,18 +10,9 @@
       :slides-per-view="1"
       :space-between="40"
     >
-      <swiperSlide>
+      <swiperSlide v-for="el in caseInfo.project" :key="el.id">
         <img
-          src="@/assets/img/case-img.png"
-          alt=""
-          class="case-img"
-          width="1159"
-          height="569"
-        />
-      </swiperSlide>
-      <swiperSlide>
-        <img
-          src="@/assets/img/case-img.png"
+          :src="el.image"
           alt=""
           class="case-img"
           width="1159"
@@ -47,6 +38,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 export default {
+  props: {
+    caseInfo: {
+      type: Object,
+      required: true,
+    },
+  },
   components: {
     Swiper,
     SwiperSlide,
@@ -71,14 +68,18 @@ export default {
   text-align: center;
 }
 .case-img {
-  padding: 0 20px;
+  padding: 0;
   width: 100%;
   height: auto;
 }
 .case__buttons {
   width: 208px;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   display: flex;
   justify-content: space-around;
+}
+.swiper-btn {
+  width: 58px;
+  height: 58px;
 }
 </style>

@@ -22,7 +22,15 @@
             >
           </h3>
           <h3 class="footer__telegram-contact">
-            <a href="https://t.me/EasyDevVi">TG Виталий</a>
+            <a href="https://t.me/EasyDevVi"
+              ><img
+                src="@/assets/img/tg_icon.svg"
+                alt=""
+                class="tg_icon"
+                width="48"
+                height="48"
+              />Виталий</a
+            >
           </h3>
         </div>
         <img src="@/assets/img/footer_img.png" alt="" class="footer__image" />
@@ -47,7 +55,6 @@
 export default {
   methods: {
     showForm() {
-      console.log(1);
       this.$emit("showForm");
     },
   },

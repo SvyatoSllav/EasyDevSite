@@ -1,47 +1,28 @@
 <template>
   <section class="case__text">
-    <div class="text__client">
-      <h6 class="text__title">О клиенте</h6>
+    <div
+      class="text__client"
+      v-for="caseText in caseInfo.project_block"
+      :key="caseText.id"
+    >
+      <h6 class="text__title">{{ caseText.title }}</h6>
       <p class="text__content">
-        ProtoLamp — студия разработки технологических стартапов и MVP.
-        Специалисты студии создают тестовые версии продуктов с помощью
-        классической и NoCode разработки, а также занимаются дизайном
-        проектов.ProtoLamp раньше была частью другой студии — MetaLamp, для
-        которой мы создавали логотип пару лет назад. Сейчас MetaLamp
-        концентрируется только на блокчейн-разработке, а ProtoLamp работает со
-        стартапами в других сферах
+        {{ caseText.title }}
       </p>
-      <!-- <hr /> -->
-    </div>
-    <div class="text__goal">
-      <h6 class="text__title">Задача</h6>
-      <p class="text__content">
-        Разработать логотип и фирменный стиль, которые сохранят преемственность
-        айдентики MetaLamp, и подчеркнут специализацию студии ProtoLamp — работу
-        со стартапами.
-      </p>
-      <!-- <hr /> -->
-    </div>
-    <div class="text__solution">
-      <h6 class="text__title">Решение</h6>
-      <p class="text__content">
-        При создании логотипа ProtoLamp мы использовали тот же образ лампы, что
-        и в логотипе MetaLamp, но изменили цвет свечения. Лампа — это метафора,
-        которая означает, что студия «‎подсвечивает» ‎сильные и слабые стороны
-        клиента, помогает ему совершенствовать проекты.Фирменными цветами стали
-        голубой, темно- и светло-фиолетовый. Голубой цвет — это имитация света
-        от экрана, ассоциация с чем-то новым. Два оттенка фиолетовых расставляют
-        цветовые акценты на фирменных носителях, дополняют голубой цвет и при
-        этом не перегружают общее восприятие дизайна. Стилеобразующими
-        элементами стали линии — это метафора, которая демонстрирует, что
-        ProtoLamp выделяет самое важное в работе с прототипами продуктов.
-      </p>
+      <hr />
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    caseInfo: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -89,20 +70,18 @@ export default {};
     width: 100%;
   }
   .text__title {
-    margin-top: 140px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 766px) {
   .case__text {
     padding: 80px 13px 13px 29px;
   }
-  .text__title {
-    margin-top: 120px;
-  }
   .text__title,
   .text__content {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 25px;
   }
 }
 </style>

@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 .services__achievement {
-  margin-right: 120px;
+  margin-right: 130px;
 }
 .service__achivement-title {
   font-family: "Unbounded";

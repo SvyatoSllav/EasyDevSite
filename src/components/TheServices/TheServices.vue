@@ -2,11 +2,15 @@
   <section class="services">
     <div class="services__wrapper">
       <div class="services__items">
-        <div class="service__item" v-for="item in items" :key="item.id">
+        <div
+          class="service__item"
+          v-for="item in serviceItem.services_block"
+          :key="item.id"
+        >
           <div class="service__info-wrapper">
-            <h3 class="service__item-title">{{ item.name }}</h3>
+            <h3 class="service__item-title">{{ item.title }}</h3>
             <p class="service__item-text">
-              {{ item.text }}
+              {{ item.description }}
             </p>
           </div>
         </div>
@@ -42,6 +46,12 @@ export default {
         },
       ],
     };
+  },
+  props: {
+    serviceItem: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>

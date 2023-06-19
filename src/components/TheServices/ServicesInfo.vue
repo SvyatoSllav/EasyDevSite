@@ -4,7 +4,7 @@
       <template v-slot:first_tag>услуги</template
       ><template v-slot:second_tag>/услуги</template>
     </gradient-tags>
-    <h4 class="services__title">{{ servicesTitle }}</h4>
+    <h4 class="services__title">{{ serviceItem.title }}</h4>
     <div class="services__content">
       <div class="services__content-wrapper">
         <div class="services__texts">
@@ -25,11 +25,12 @@
             </service-achivement>
           </div>
           <p class="services__text-title">
-            Принимайте правильные управленческие решения на основе данных
-            аудита. Описание и дополнительная информация.
+            {{ serviceItem.description }}
           </p>
         </div>
-        <img :src="servicesImg" alt="" class="services__img" />
+        <div class="service__img-wrapper">
+          <img :src="servicesImg" alt="" class="services__img" />
+        </div>
       </div>
       <a class="btn-link" @click="showForm">
         <button class="contact-btn"><slot>оставить заявку</slot></button>
@@ -42,7 +43,6 @@
 export default {
   data() {
     return {
-      servicesTitle: "Разработка ПО",
       servicesImg:
         window.innerWidth > 510
           ? require("@/assets/img/services_img_desktop.jpg")
@@ -53,6 +53,12 @@ export default {
     showForm() {
       console.log(1);
       this.$emit("showForm");
+    },
+  },
+  props: {
+    serviceItem: {
+      type: Object,
+      required: true,
     },
   },
 };
@@ -125,18 +131,23 @@ export default {
   border: 2px solid black;
   background-color: v-bind(textColor);
 }
+.service__img-wrapper {
+  max-width: 500px;
+  margin: 20px auto 0;
+}
+.services__img {
+  max-height: 430px;
+}
 @media screen and (max-width: 1160px) {
   .services__content {
     padding-bottom: 540px;
     margin: 0;
   }
-  .services__img {
-    position: absolute;
-    top: 920px;
-    left: 110px;
-  }
   .services__tags {
     margin-top: 46px;
+  }
+  .services__content-wrapper {
+    flex-direction: column;
   }
 }
 
@@ -151,9 +162,11 @@ export default {
   .contact-btn {
     margin-left: 35px;
   }
-
   .services__img {
-    top: 1020px;
+    /* position: absolute; */
+    top: 1300px;
+    /* left: auto; */
+    /* right: 35px; */
   }
 }
 
@@ -171,7 +184,7 @@ export default {
   }
   .services__content-wrapper {
     display: block;
-    padding: 37px 0 194px 13px;
+    padding: 37px 0 54px 13px;
   }
   .services__achievements {
     flex-direction: column;
@@ -190,11 +203,6 @@ export default {
     padding: 14px 71px;
     line-height: 24px;
     margin-left: 13px;
-  }
-  .services__img {
-    top: 516px;
-    left: auto;
-    right: 35px;
   }
 }
 

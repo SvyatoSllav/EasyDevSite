@@ -42,7 +42,7 @@ export default {
     async fetchProjects() {
       try {
         const response = await axios.get(
-          process.env.API_URL + "/portfolio/projects/"
+          "http://89.108.103.109/api/v1" + "/portfolio/projects/"
         );
         this.portfolioItems = response.data.data;
       } catch (e) {

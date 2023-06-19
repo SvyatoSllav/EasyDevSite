@@ -43,7 +43,10 @@ export default {
         const route = useRoute();
         let serviceId = route.path.split("/")[2];
         const response = await axios.get(
-          process.env.API_URL + "/services/projects/" + serviceId + "/"
+          "http://89.108.103.109/api/v1" +
+            "/services/projects/" +
+            serviceId +
+            "/"
         );
         this.serviceItem = response.data.data;
       } catch (e) {

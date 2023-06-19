@@ -80,7 +80,7 @@ export default {
     async fetchReviews() {
       try {
         const response = await axios.get(
-          process.env.API_URL + "/portfolio/reviews_list/"
+          "http://89.108.103.109/api/v1" + "/portfolio/reviews_list/"
         );
         this.posts = response.data;
       } catch (e) {

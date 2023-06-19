@@ -54,7 +54,7 @@ export default {
         const route = useRoute();
         let caseId = route.path.split("/")[2];
         const response = await axios.get(
-          process.env.API_URL + "/portfolio/projects/" + caseId + "/"
+          "http://89.108.103.109/api/v1" + "/portfolio/projects/" + caseId + "/"
         );
         this.portfolioItem = response.data.data;
       } catch (e) {

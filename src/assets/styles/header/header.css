@@ -22,7 +22,6 @@
     margin-right: 40px;
 }
 
-
 .header__nav-item {
     font-family: "Unbounded";
     font-style: normal;
@@ -90,7 +89,7 @@
 .header__border-square_top-right {
     top: 20px;
     left: 285px;
-    animation: followBorder 5s ease infinite;
+    animation: followBorder 10s ease infinite;
 }
 
 .header__border-square_bottom-left {
@@ -101,12 +100,12 @@
 .header__border-square_bottom-right {
     top: 92px;
     left: 285px;
-    animation: followBorder 5s ease infinite;
+    animation: followBorder 10s ease infinite;
 }
 
 @keyframes followBorder {
     0% {
-        left: 425px;
+        left: 430px;
     }
 
     20% {
@@ -136,7 +135,7 @@
     width: 290px;
     height: 82px;
     overflow: hidden;
-    animation: scaleWidth 5s ease infinite;
+    animation: scaleWidth 10s ease infinite;
 }
 
 @keyframes scaleWidth {
@@ -173,27 +172,27 @@
 
 .header__animated-texts li:first-child {
     top: 11px;
-    animation: FirstSlide 5s steps(5) infinite;
+    animation: FirstSlide 10s steps(5) infinite;
 }
 
 .header__animated-texts li:nth-child(2) {
     top: 40px;
-    animation: SecondSlide 5s steps(5) infinite;
+    animation: SecondSlide 10s steps(5) infinite;
 }
 
 .header__animated-texts li:nth-child(3) {
     top: 119px;
-    animation: ThidSlide 5s steps(5) infinite;
+    animation: ThidSlide 10s steps(5) infinite;
 }
 
 .header__animated-texts li:nth-child(4) {
     top: 180px;
-    animation: FourthSlide 5s steps(5) infinite;
+    animation: FourthSlide 10s steps(5) infinite;
 }
 
 .header__animated-texts li:nth-child(5) {
     top: 300px;
-    animation: FifthSlide 5s steps(5) infinite;
+    animation: FifthSlide 10s steps(5) infinite;
 }
 
 @keyframes FirstSlide {
@@ -236,34 +235,35 @@
 }
 
 .header__animation-text::after {
-    z-index: 1;
     content: "";
     position: absolute;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     border-left: 2px solid #DE6DF1;
     background-color: #fff;
 }
 
 .parser-animation::after {
-    animation: typing 1s steps(10) infinite;
+    animation: typing 2s steps(8) infinite;
 }
 
 .bots-animation::after {
-    animation: typing 1s steps(7) infinite;
+    animation: typing 2s steps(5) infinite;
 }
 
 .sites-animation::after {
-    animation: typing 1s steps(8) infinite;
+    animation: typing 2s steps(6) infinite;
 }
 
 .soft-animation::after {
-    animation: typing 1s steps(6) infinite;
+    margin-left: 1px;
+    animation: typing 2s steps(5) infinite;
 }
 
 .webapp-animation::after {
-    animation: typing 1s steps(19) infinite;
+    margin-left: -2px;
+    animation: typing 2s steps(15) infinite;
 }
 
 @keyframes typing {

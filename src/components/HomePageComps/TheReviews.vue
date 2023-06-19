@@ -50,7 +50,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import axios from "axios";
-// import.meta.env.API_URL;
 export default {
   components: {
     Swiper,

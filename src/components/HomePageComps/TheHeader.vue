@@ -36,29 +36,29 @@
         ></div>
         <ul class="header__animated-texts">
           <li>
-            <span class="header__animation-text parser-animation"
-              >парсеры<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span
-            >
+            <span class="header__animation-text parser-animation">
+              парсеры&nbsp;&nbsp;
+            </span>
           </li>
           <li>
             <span class="header__animation-text bots-animation"
-              >боты<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span
+              >боты&nbsp;&nbsp;</span
             >
           </li>
           <li>
             <span class="header__animation-text sites-animation"
-              >сайты<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span
+              >сайты&nbsp;&nbsp;</span
             >
           </li>
           <li>
             <span class="header__animation-text soft-animation"
-              >софт<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span
+              >софт&nbsp;&nbsp;</span
             >
           </li>
           <li>
-            <span class="header__animation-text webapp-animation"
-              >веб приложения<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span
-            >
+            <span class="header__animation-text webapp-animation">
+              веб&nbsp;&nbsp;приложения&nbsp;&nbsp;
+            </span>
           </li>
         </ul>
       </div>

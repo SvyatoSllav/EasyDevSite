@@ -13,7 +13,7 @@
           }"
           :modules="modules"
           class="mySwiper"
-          :slides-per-view="reviewAmount"
+          :slides-per-view="this.calculateReviewAmount"
           :space-between="50"
         >
           <swiperSlide :key="post.id" v-for="post in posts">
@@ -64,8 +64,6 @@ export default {
           ? "tablet"
           : "mobile"
       }.png`),
-      reviewAmount:
-        window.innerWidth > 1025 ? 3 : window.innerWidth > 450 ? 2 : 1,
       posts: [],
     };
   },
@@ -92,6 +90,16 @@ export default {
   },
   mounted() {
     this.fetchReviews();
+  },
+  computed: {
+    calculateReviewAmount() {
+      if (window.innerWidth > 1025 && this.posts.length >= 3) {
+        return 3;
+      } else if (window.innerWidth > 450 && this.posts.length >= 2) {
+        return 2;
+      }
+      return 1;
+    },
   },
 };
 </script>

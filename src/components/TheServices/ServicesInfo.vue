@@ -40,12 +40,6 @@
 
 <script>
 export default {
-  //   props: {
-  //     service: {
-  //       type: Array,
-  //       required: true,
-  //     },
-  //   },
   data() {
     return {
       servicesTitle: "Разработка ПО",
@@ -133,12 +127,12 @@ export default {
 }
 @media screen and (max-width: 1160px) {
   .services__content {
-    padding-bottom: 610px;
+    padding-bottom: 540px;
     margin: 0;
   }
   .services__img {
     position: absolute;
-    top: 1050px;
+    top: 920px;
     left: 110px;
   }
   .services__tags {
@@ -159,7 +153,7 @@ export default {
   }
 
   .services__img {
-    top: 1170px;
+    top: 900px;
   }
 }
 

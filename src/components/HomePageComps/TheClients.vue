@@ -58,4 +58,11 @@ export default {};
     transform: translate(-1570px);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .client-tags {
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+}
 </style>

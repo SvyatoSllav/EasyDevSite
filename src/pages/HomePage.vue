@@ -34,8 +34,8 @@ export default {
         window.innerWidth > 1160
           ? 0
           : window.innerWidth > 476
-          ? "71px"
-          : "50px",
+          ? "30px"
+          : "20px",
     };
   },
   components: {

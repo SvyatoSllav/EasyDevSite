@@ -19,9 +19,9 @@ export default {
       burgerTop:
         window.innerWidth > 1160
           ? 0
-          : window.innerWidth > 475
-          ? "95px"
-          : "50px",
+          : window.innerWidth > 476
+          ? "30px"
+          : "20px",
       isVisible: false,
     };
   },

@@ -26,10 +26,11 @@
     display: flex;
 }
 
-.review__author-profile {
+.review__author-profile img{
     margin-right: 20px;
-    max-width: 64px;
-    max-height: 64px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
 }
 
 .review__author-info {

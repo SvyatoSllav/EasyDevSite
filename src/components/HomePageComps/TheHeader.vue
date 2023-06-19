@@ -97,7 +97,6 @@ export default {
       const el = this.$refs[elId];
       console.log(el);
       el.scrollIntoView({ behavior: "smooth" });
-      //   document.getElementById(elId).scrollIntoView();
     },
   },
 };

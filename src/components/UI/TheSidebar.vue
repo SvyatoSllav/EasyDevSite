@@ -1,4 +1,5 @@
 <template>
+  <a href="#"><img :src="logoImg" alt="" /></a>
   <burger-menu
     :burgerTop="burgerTop"
     @click="this.showSidebar = true"
@@ -98,7 +99,7 @@ export default {
   width: 200%;
   height: 200%;
   background: rgba(0, 0, 0, 0.65);
-  z-index: 2;
+  z-index: 3;
 }
 
 .sidebar {

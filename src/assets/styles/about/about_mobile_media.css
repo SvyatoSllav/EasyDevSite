@@ -18,6 +18,10 @@
         margin-top: 50px;
     }
 
+    .about__title-tags{
+        padding-top: 20px;
+    }
+
     .about_button {
         max-width: 380px;
         white-space: nowrap;

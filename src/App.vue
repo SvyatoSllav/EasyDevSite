@@ -52,7 +52,7 @@ export default {};
   src: url(@/assets/fonts/Righteous-Regular.ttf);
 }
 :root {
-  --title-fz: 50px;
+  --title-fz: 44px;
   --sub_title-fz: 28px;
   --main_text-fz: 28px;
   --review_text-fz: 16px;

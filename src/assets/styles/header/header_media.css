@@ -9,6 +9,16 @@
         padding: 0 37px;
     }
 
+    .header__nav-wrapper {
+        position: fixed;
+        background-color: #fff;
+        height: 100px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
     .header__content {
         display: block;
         padding-bottom: 281px;
@@ -26,6 +36,12 @@
 
     .header__nav-items {
         display: none;
+    }
+
+    .logo {
+        position: fixed;
+        top: 8px;
+        z-index: 3;
     }
 
     .header__nav_contact-button {

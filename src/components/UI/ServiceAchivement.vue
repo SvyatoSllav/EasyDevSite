@@ -28,7 +28,7 @@ export default {
   font-family: "Golos-Text-Regular";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 19px;
   color: #555555;
   max-width: 113px;

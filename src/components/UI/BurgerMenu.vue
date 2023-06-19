@@ -12,7 +12,7 @@ export default {
     burgerTop: {
       type: String,
       required: false,
-      default: "79px",
+      default: "29px",
     },
   },
   computed: {
@@ -27,7 +27,7 @@ export default {
         height: window.innerWidth > 475 ? "47px" : "28px",
         flexDirection: "column",
         justifyContent: "space-between",
-        zIndex: 2,
+        zIndex: 3,
       };
     },
   },

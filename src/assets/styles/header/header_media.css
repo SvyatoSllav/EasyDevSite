@@ -41,6 +41,7 @@
     .logo {
         position: fixed;
         top: 8px;
+        left: 20px;
         z-index: 3;
     }
 
@@ -50,6 +51,9 @@
 }
 
 @media screen and (max-width: 767px) {
+    .header__nav-wrapper {
+        height: 70px;
+    }
     .header__title {
         max-width: 350px;
         margin-top: 28px;

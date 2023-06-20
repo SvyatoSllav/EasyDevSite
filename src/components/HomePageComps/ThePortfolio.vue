@@ -116,6 +116,7 @@ export default {
 @media screen and (max-width: 1160px) {
   .porftolio__items {
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
   .portfolio__contact-link {
     justify-content: center;

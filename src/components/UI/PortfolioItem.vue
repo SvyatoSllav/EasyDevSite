@@ -105,4 +105,18 @@ export default {
     right: 61px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .portfolio__item {
+    max-width: 318px;
+    max-height: 314px;
+  }
+}
 </style>

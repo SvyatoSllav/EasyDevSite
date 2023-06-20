@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .footer {
   margin-top: 130px;
   background-color: #fff;
@@ -106,6 +106,13 @@ export default {
   white-space: nowrap;
   padding-bottom: 25px;
   border-bottom: 1px solid black;
+  align-items: center;
+}
+
+.tg_icon {
+  position: relative;
+  top: 8px;
+  right: 5px;
 }
 
 .footer__image {

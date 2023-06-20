@@ -1,6 +1,5 @@
 <template>
   <div class="case__info">
-    <div class="pagination__wrapper"><div class="paginate"></div></div>
     <div class="card">
       <div class="card__header">
         <div class="bullet-active bullet"></div>
@@ -60,13 +59,6 @@ export default {
   height: 85px;
   padding-top: 30px;
   background-color: #e0f3ff;
-}
-.pagination__wrapper {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-  height: 86px;
-  z-index: 1;
 }
 .bullet {
   position: relative;

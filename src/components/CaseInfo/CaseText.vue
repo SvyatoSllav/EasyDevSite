@@ -9,7 +9,6 @@
       <p class="text__content">
         {{ caseText.title }}
       </p>
-      <hr />
     </div>
   </section>
 </template>

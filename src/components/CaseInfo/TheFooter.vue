@@ -174,6 +174,7 @@ export default {
   .footer__contacts {
     display: flex;
     flex-direction: column;
+    align-items: start;
   }
   .footer__contacts h3 {
     margin-bottom: 25px;

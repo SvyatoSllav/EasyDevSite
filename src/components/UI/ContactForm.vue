@@ -67,7 +67,7 @@ export default {
     async sendFormData() {
       try {
         const response = await axios.post(
-          "http://89.108.103.109/api/v1" + "/application/create/",
+          "https://api.easydev-program.com/api/v1" + "/application/create/",
           {
             name: this.name,
             messager_link: this.telegram,

@@ -61,8 +61,8 @@ export default {
 };
 </script>
 
-<style scoped>
-.footer {
+<style>
+/* .footer {
   background-color: #fff;
 }
 
@@ -227,5 +227,5 @@ export default {
   .contact-btn {
     padding: 14px 10px;
   }
-}
+} */
 </style>

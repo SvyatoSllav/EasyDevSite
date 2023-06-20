@@ -157,7 +157,7 @@ export default {
     margin-left: 39px;
   }
   .services__content-wrapper {
-    padding: 91px 135px 194px 35px;
+    padding: 91px 135px 20px 35px;
   }
   .contact-btn {
     margin-left: 35px;

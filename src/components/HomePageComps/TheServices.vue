@@ -40,7 +40,7 @@ export default {
     async fetchServices() {
       try {
         const response = await axios.get(
-          "http://89.108.103.109/api/v1" + "/portfolio/projects/"
+          "https://api.easydev-program.com/api/v1" + "/portfolio/projects/"
         );
         this.serviceItems = response.data.data;
       } catch (e) {

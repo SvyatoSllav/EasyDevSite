@@ -43,7 +43,7 @@ export default {
         const route = useRoute();
         let serviceId = route.path.split("/")[2];
         const response = await axios.get(
-          "http://89.108.103.109/api/v1" +
+          "https://api.easydev-program.com/api/v1" +
             "/services/projects/" +
             serviceId +
             "/"

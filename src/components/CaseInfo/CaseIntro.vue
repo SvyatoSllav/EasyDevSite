@@ -10,7 +10,11 @@
     <h6 class="case__subtitle">{{ caseInfo.description }}</h6>
     <p class="case__case-info">Особенности проекта</p>
     <ul class="case__info-list">
-      <li v-for="el in this.infoItems" class="case__info-text" :key="el">
+      <li
+        v-for="el in caseInfo.achivenemt_list"
+        class="case__info-text"
+        :key="el"
+      >
         {{ el }}
       </li>
     </ul>
@@ -21,13 +25,7 @@
 <script>
 export default {
   data() {
-    return {
-      infoItems: [
-        "Адаптивная верстка с анимацией и эффектом Parallax",
-        "Получение актуальной информации о проходящих акциях в рамках «Программы 3+»",
-        "Актуальный список дилеров, с возможностью просмотра их местоположения на карте на мобильных устройствах",
-      ],
-    };
+    return {};
   },
   props: {
     caseInfo: {
@@ -51,7 +49,6 @@ export default {
   background-color: #fff;
   padding: 56px 0 0px 110px;
   max-width: 1372px;
-  max-height: 590px;
   margin: 0 auto 92px;
   border-radius: 30px;
 }
